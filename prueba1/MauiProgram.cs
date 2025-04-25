@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using FFImageLoading.Maui;
 
-
+//otro comentario
 // holam esto es una comprobacion 
 namespace prueba1
 {
