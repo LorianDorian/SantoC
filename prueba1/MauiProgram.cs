@@ -5,6 +5,9 @@ using FFImageLoading.Maui;
 // holam esto es una comprobacion 
 //Viva santo churro
 
+// holam esto es una comprobacion 
+
+//Holi bb,tqmmm
 namespace prueba1
 {
     public static class MauiProgram
