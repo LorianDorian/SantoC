@@ -11,6 +11,20 @@ public partial class Compra : ContentPage
     {
         lblCantidadSeleccionada.Text = $"Cantidad seleccionada: {e.NewValue}";
     }
+    private void OnPagoSelectedIndexChanged(object sender, EventArgs e)
+    {
+        // Si el método de pago seleccionado es "Tarjeta", mostrar los campos adicionales
+        if (pickerPago.SelectedIndex == 0) // 0 es el índice de "Tarjeta"
+        {
+            tarjetaFields.IsVisible = true;
+        }
+        else
+        {
+            tarjetaFields.IsVisible = false;
+        }
+    }
+
+    // Manejar la confirmación de la compra
 
     private async void OnConfirmarCompraClicked(object sender, EventArgs e)
     {

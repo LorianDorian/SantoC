@@ -13,7 +13,7 @@
 
             <Label Text="Nombre: " FontAttributes="Bold" />
             <Entry x:Name="entryNombre" Placeholder="Cliente a entregar" Keyboard="Text" />
-           
+
             <Label Text="Telefono: " FontAttributes="Bold" />
             <Entry Placeholder=" " Keyboard="Text" />
 
@@ -22,18 +22,30 @@
             <Label x:Name="lblCantidadSeleccionada" Text="Cantidad seleccionada: 1" />
 
             <Label Text="Método de pago:" FontAttributes="Bold" />
-            <Picker x:Name="pickerPago">
+            <Picker x:Name="pickerPago" SelectedIndexChanged="OnPagoSelectedIndexChanged">
                 <Picker.Items>
                     <x:String>Tarjeta</x:String>
                     <x:String>Efectivo</x:String>
                 </Picker.Items>
             </Picker>
 
+            <!-- Campos adicionales solo para "Tarjeta" -->
+            <StackLayout x:Name="tarjetaFields" IsVisible="False">
+                <Label Text="Número de tarjeta:" FontAttributes="Bold" />
+                <Entry x:Name="entryNumeroTarjeta" Placeholder="Ingrese el número de tarjeta" Keyboard="Numeric" />
+
+                <Label Text="Nombre en tarjeta:" FontAttributes="Bold" />
+                <Entry x:Name="entryNombreTarjeta" Placeholder="Nombre como aparece en la tarjeta" Keyboard="Text" />
+
+                <Label Text="Fecha de vencimiento:" FontAttributes="Bold" />
+                <Entry x:Name="entryFechaVencimiento" Placeholder="MM/AA" Keyboard="Text" />
+            </StackLayout>
+
             <Label Text="Sucursal preferida:" FontAttributes="Bold" />
             <Picker x:Name="pickerSucursal">
                 <Picker.Items>
-                    <x:String> Costera Miguel Alemán</x:String>
-                    <x:String> Pie de la Cuesta</x:String>
+                    <x:String>Costera Miguel Alemán</x:String>
+                    <x:String>Pie de la Cuesta</x:String>
                 </Picker.Items>
             </Picker>
 
@@ -45,4 +57,3 @@
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-
