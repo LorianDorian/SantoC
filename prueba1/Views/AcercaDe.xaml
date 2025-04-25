@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba1.Views.AcercaDe"
+ Title="AcercaDe">
+
+    <Grid>
+        <!-- Menú lateral -->
+        
+
+        <!-- Contenido principal -->
+        <ScrollView>
+            <VerticalStackLayout Padding="30" Spacing="18">
+
+                <Label Text="Conócenos" 
+                       Style="{StaticResource Headline}" 
+                       SemanticProperties.HeadingLevel="Level1" />
+
+                <Label Text="Somos una marca dedicada a la elaboración de finos churros rellenos de forma artesanal"
+                       SemanticProperties.HeadingLevel="Level2"
+                       HorizontalOptions="Center" />
+
+                <Label Text="¡Especialistas en la elaboración de deliciosos churros rellenos, frappes, smoothies, tapioca y helado!"
+                       HorizontalOptions="Center" />
+
+                <!-- Facebook -->
+                <Grid ColumnDefinitions="Auto,*" Padding="5">
+                    <Image Source="facebook.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
+                    <Label Text="Facebook: @El Santo Churro"
+                           TextColor="Blue"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnFacebookTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <!-- Instagram -->
+                <Grid ColumnDefinitions="Auto,*" Padding="5">
+                    <Image Source="instagram.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
+                    <Label Text="Instagram: @elsantochurromx"
+                           TextColor="Violet"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnInstagramTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <!-- Correo -->
+                <Grid ColumnDefinitions="Auto,*" Padding="5">
+                    <Image Source="correo.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
+                    <Label Text="Correo: elsantochurromx@gmail.com"
+                           TextColor="Gray"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="1" />
+                </Grid>
+
+                <!-- Sitio web -->
+                <Grid ColumnDefinitions="Auto,*" Padding="5">
+                    <Image Source="sitioweb.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
+                    <Label Text="Sitio web"
+                           TextColor="Gray"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="1">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnSitiowebTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+
+                <!-- Teléfono -->
+                <Grid ColumnDefinitions="Auto,*" Padding="5">
+                    <Image Source="telefono.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
+                    <Label Text="Teléfono: 744 174 7637"
+                           TextColor="Gray"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="1" />
+                </Grid>
+
+                <!-- Dirección -->
+                <Grid ColumnDefinitions="Auto,*" Padding="5">
+                    <Image Source="ubicacion.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
+                    <Label Text="Dirección: Calz Pie de la Cuesta 239-Interior Chedraui,&#10;Pie de La Cuesta, 39580 Acapulco de Juárez, Gro"
+                           TextColor="Gray"
+                           FontAttributes="Bold"
+                           VerticalOptions="Center"
+                           Grid.Column="1"
+                           LineBreakMode="WordWrap" />
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
+

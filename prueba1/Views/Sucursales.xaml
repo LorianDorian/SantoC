@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba1.Views.Sucursales"
+             Title="">
+    <VerticalStackLayout Padding="30" Spacing="1">
+        <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
+            <Label Text="El Santo Churro - Pie de la Cuesta"
+               TextColor="Black"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Start" />
+        </Grid>
+        <Image
+         Source="sucursalpie.jpg"
+         HeightRequest="180"
+         WidthRequest="280"
+         Aspect="AspectFit"/>
+
+        <Label Text=" Dirección: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+        
+        <Label Text=" Latitud: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+        
+        <Label Text=" Longitud: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+
+        <Label Text=" Estado de Actividad: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+
+        <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
+            <Label Text="El Santo Churro - Costera"
+               TextColor="Black"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Start" />
+        </Grid>
+        
+        <Image
+         Source="costera.jpg"
+         HeightRequest="180"
+         WidthRequest="280"
+         Aspect="AspectFit"/>
+
+        <Label Text=" Dirección: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+
+        <Label Text=" Latitud: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+
+        <Label Text=" Longitud: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+
+        <Label Text=" Estado de Actividad: ()"
+       FontSize="17"
+       TextColor="Black"             
+       VerticalOptions="Center"
+       Margin="10,5,10,0"/>
+
+    </VerticalStackLayout>
+</ContentPage>

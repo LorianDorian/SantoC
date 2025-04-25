@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba1.Views.Personal"
+             Title="Personal">
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="Auto,*" Padding="14" VerticalOptions="Start" >
+            <!-- Logo a la izquierda -->
+            <Image 
+        Source="santochurro.png"
+        HeightRequest="180"
+        WidthRequest="180"
+        Aspect="AspectFit"
+        Grid.Column="0" />
+
+            <!-- Texto a la derecha -->
+            <Label 
+        Text="Mi Cuenta:&#10;Hola, (nombre de usuario)"
+        Style="{StaticResource Headline}"
+        SemanticProperties.HeadingLevel="Level2"
+        FontSize="Title"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Grid.Column="1" />
+        </Grid>
+
+
+        <Button Text="Nombre      >>" Clicked="EditarNombre" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,5,20,0"/>
+        <Button Text="Correo      >>" Clicked="EditarCorreo" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+        <Button Text="Telefono      >>" Clicked="EditarTelefono" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+        <Button Text="Dirección      >>" Clicked="EditarDireccion" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+        <Button Text="Mis pedidos anteriores      >>" Clicked="PedidosAnteriores" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+
+        <Label Text="Activo desde: (fecha)"  BackgroundColor="Transparent" TextColor="Black" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+
+    </VerticalStackLayout>
+</ContentPage>

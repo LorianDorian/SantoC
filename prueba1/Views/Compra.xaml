@@ -1,0 +1,48 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba1.Views.Compra"
+             Title=" ">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="4">
+
+            <Image 
+                Source="mascotacompra.png"
+                HeightRequest="180"
+                WidthRequest="280"
+                Aspect="AspectFit" />
+
+            <Label Text="Nombre: " FontAttributes="Bold" />
+            <Entry x:Name="entryNombre" Placeholder="Cliente a entregar" Keyboard="Text" />
+           
+            <Label Text="Telefono: " FontAttributes="Bold" />
+            <Entry Placeholder=" " Keyboard="Text" />
+
+            <Label Text="Cantidad:" FontAttributes="Bold" />
+            <Stepper x:Name="cantidadStepper" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" />
+            <Label x:Name="lblCantidadSeleccionada" Text="Cantidad seleccionada: 1" />
+
+            <Label Text="Método de pago:" FontAttributes="Bold" />
+            <Picker x:Name="pickerPago">
+                <Picker.Items>
+                    <x:String>Tarjeta</x:String>
+                    <x:String>Efectivo</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Sucursal preferida:" FontAttributes="Bold" />
+            <Picker x:Name="pickerSucursal">
+                <Picker.Items>
+                    <x:String> Costera Miguel Alemán</x:String>
+                    <x:String> Pie de la Cuesta</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Label Text="Total a pagar: $" FontAttributes="Bold" />
+            <Button Text="Confirmar compra"
+                    BackgroundColor="#8B4513"
+                    TextColor="White"
+                    Clicked="OnConfirmarCompraClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
