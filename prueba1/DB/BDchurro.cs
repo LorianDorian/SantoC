@@ -79,4 +79,20 @@ public class DatabaseService
             await AddMenuItemAsync(new MenuItem { Name = "Veggie Wrap", Price = 4.49 });
         }
     }
+
+    public async Task SyncWithApiAsync()
+    {
+        var api = new ApiService();
+        var apiItems = await api.FetchMenuItemsFromApiAsync();
+
+        await InitAsync();
+
+        foreach (var item in apiItems)
+        {
+            // Optional: avoid duplicates by checking if it already exists
+            var exists = await _db.Table<MenuItem>().Where(x => x.Name == item.Name).FirstOrDefaultAsync();
+            if (exists == null)
+                await _db.InsertAsync(item);
+        }
+    }
 }

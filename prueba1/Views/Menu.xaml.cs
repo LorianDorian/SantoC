@@ -1,4 +1,4 @@
-
+﻿
 namespace prueba1.Views
 {
     public partial class Menu : ContentPage
@@ -12,9 +12,11 @@ namespace prueba1.Views
 
         private async void LoadMenuItems()
         {
-            await _dbService.SeedDataAsync();
-            var menuItems = await _dbService.GetMenuItemsAsync();
+            await _dbService.SyncWithApiAsync(); // ← download & store if online
+            var menuItems = await _dbService.GetMenuItemsAsync(); // ← always read from local DB
             MenuCollectionView.ItemsSource = menuItems;
         }
     }
+
+
 }
