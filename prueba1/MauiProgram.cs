@@ -7,7 +7,7 @@ using FFImageLoading.Maui;
 
 // holam esto es una comprobacion 
 
-//Holi bb,tqmmms
+//Holi bb,tqmmm
 namespace prueba1
 {
     public static class MauiProgram
