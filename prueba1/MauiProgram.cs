@@ -3,6 +3,7 @@ using FFImageLoading.Maui;
 
 //otro comentario
 // holam esto es una comprobacion 
+
 namespace prueba1
 {
     public static class MauiProgram
