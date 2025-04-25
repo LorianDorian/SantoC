@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using FFImageLoading.Maui;
 
+
+// holam esto es una comprobacion 
 namespace prueba1
 {
     public static class MauiProgram
