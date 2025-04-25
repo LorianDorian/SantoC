@@ -15,7 +15,7 @@ namespace prueba1
         }
         private async void OnLoginClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HomePage());
+            await Navigation.PushAsync(new Menu());
         }
 
 

@@ -1,17 +1,20 @@
 
 namespace prueba1.Views
 {
-    public partial class Menu
-        : ContentPage
+    public partial class Menu : ContentPage
     {
+        private DatabaseService _dbService = new DatabaseService();
         public Menu()
         {
             InitializeComponent();
+            LoadMenuItems();
         }
 
-        private void InitializeComponent()
+        private async void LoadMenuItems()
         {
-            throw new NotImplementedException();
+            await _dbService.SeedDataAsync();
+            var menuItems = await _dbService.GetMenuItemsAsync();
+            MenuCollectionView.ItemsSource = menuItems;
         }
     }
 }

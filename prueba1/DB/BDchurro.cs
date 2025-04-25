@@ -1,10 +1,5 @@
-﻿using Npgsql;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
+/*
 namespace prueba1.DB
 {
     public class BDchurro
@@ -31,6 +26,57 @@ namespace prueba1.DB
             }
 
             return productos;
+        }
+    }
+}
+*/
+
+using SQLite;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.IO;
+
+public class MenuItem
+{
+    [PrimaryKey, AutoIncrement]
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public double Price { get; set; }
+}
+
+public class DatabaseService
+{
+    private SQLiteAsyncConnection _db;
+
+    public async Task InitAsync()
+    {
+        if (_db != null)
+            return;
+
+        var dbPath = Path.Combine(FileSystem.AppDataDirectory, "menu.db");
+        _db = new SQLiteAsyncConnection(dbPath);
+        await _db.CreateTableAsync<MenuItem>();
+    }
+
+    public async Task<List<MenuItem>> GetMenuItemsAsync()
+    {
+        await InitAsync();
+        return await _db.Table<MenuItem>().ToListAsync();
+    }
+
+    public async Task AddMenuItemAsync(MenuItem item)
+    {
+        await InitAsync();
+        await _db.InsertAsync(item);
+    }
+
+    public async Task SeedDataAsync()
+    {
+        var count = (await GetMenuItemsAsync()).Count;
+        if (count == 0)
+        {
+            await AddMenuItemAsync(new MenuItem { Name = "Cheeseburger", Price = 5.99 });
+            await AddMenuItemAsync(new MenuItem { Name = "Veggie Wrap", Price = 4.49 });
         }
     }
 }
