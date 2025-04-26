@@ -3,12 +3,12 @@
              x:Class="prueba1.Views.Compra"
              Title=" ">
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="4">
+        <VerticalStackLayout Padding="20" Spacing="10">
 
             <Image 
                 Source="mascotacompra.png"
                 HeightRequest="180"
-                WidthRequest="280"
+                WidthRequest="180"
                 Aspect="AspectFit" />
 
             <Label Text="Nombre: " FontAttributes="Bold" />
@@ -22,12 +22,37 @@
             <Label x:Name="lblCantidadSeleccionada" Text="Cantidad seleccionada: 1" />
 
             <Label Text="Método de pago:" FontAttributes="Bold" />
-            <Picker x:Name="pickerPago" SelectedIndexChanged="OnPagoSelectedIndexChanged">
-                <Picker.Items>
-                    <x:String>Tarjeta</x:String>
-                    <x:String>Efectivo</x:String>
-                </Picker.Items>
-            </Picker>
+
+            <Grid ColumnDefinitions="*,*" Padding="5">
+                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+                <ImageButton Source="sucursal1.png"
+                    x:Name="btnEfectivo"
+                     HeightRequest="75"
+                     BackgroundColor="Bisque"
+                     Clicked="OnMetodoPagoClicked"
+                     Opacity="0.5"
+                     Aspect="AspectFit"/>
+                <Label Text="En sucursal"
+               TextColor="Black"
+               FontSize="Header"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                <ImageButton Source="tarjetabancaria.png"
+                     x:Name="btnTarjeta"
+                     HeightRequest="75"
+                     BackgroundColor="Bisque"
+                     Clicked="OnMetodoPagoClicked"
+                     Opacity="0.5"
+                     Aspect="AspectFit"/>
+                <Label Text="Tarjeta bancaria"
+               TextColor="Black"
+               FontSize="Header"
+               HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+            </Grid>
+        
 
             <!-- Campos adicionales solo para "Tarjeta" -->
             <StackLayout x:Name="tarjetaFields" IsVisible="False">
@@ -39,6 +64,8 @@
 
                 <Label Text="Fecha de vencimiento:" FontAttributes="Bold" />
                 <Entry x:Name="entryFechaVencimiento" Placeholder="MM/AA" Keyboard="Text" />
+                <Label Text="CVV:" FontAttributes="Bold" />
+                <Entry x:Name="entryCvv" Placeholder="3-4 Dígitos" Keyboard="Text" />
             </StackLayout>
 
             <Label Text="Sucursal preferida:" FontAttributes="Bold" />

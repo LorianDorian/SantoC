@@ -16,35 +16,55 @@ namespace prueba1.Views
         }
 
         // Mostrar u ocultar los campos de tarjeta dependiendo del método de pago
-        private void OnPagoSelectedIndexChanged(object sender, EventArgs e)
+
+        private ImageButton botonSeleccionado;
+        private string metodoPagoSeleccionado;
+
+        private void OnMetodoPagoClicked(object sender, EventArgs e)
         {
-            // Si el método de pago seleccionado es "Tarjeta", mostrar los campos adicionales
-            if (pickerPago.SelectedIndex == 0) // 0 es el índice de "Tarjeta"
+            var boton = sender as ImageButton;
+
+            // Reiniciar todos los estilos
+            btnTarjeta.Opacity = 0.5;
+            btnEfectivo.Opacity = 0.5;
+
+            // Botón seleccionado visualmente
+            boton.Opacity = 1;
+
+            // Guardar botón seleccionado y método
+            botonSeleccionado = boton;
+
+            if (boton == btnTarjeta)
             {
                 tarjetaFields.IsVisible = true;
+                metodoPagoSeleccionado = "Tarjeta Bancaria";
             }
-            else
+            else if (boton == btnEfectivo)
             {
                 tarjetaFields.IsVisible = false;
+                metodoPagoSeleccionado = "En sucursal";
             }
         }
 
-        // Confirmar la compra y mostrar detalles
         private async void OnConfirmarCompraClicked(object sender, EventArgs e)
         {
             string nombreCliente = entryNombre.Text?.Trim();
-            string metodoPago = pickerPago.SelectedItem?.ToString() ?? "No seleccionado";
             string metodoSucursal = pickerSucursal.SelectedItem?.ToString() ?? "No seleccionado";
 
-            // Mostrar detalles del pedido al confirmar
+            if (string.IsNullOrEmpty(metodoPagoSeleccionado))
+            {
+                metodoPagoSeleccionado = "No seleccionado";
+            }
+
             await DisplayAlert("¡Compra Confirmada! 🎉",
                 $"Gracias, {nombreCliente} 🧡\n\n" +
                 $"🛍️ Detalles del Pedido:\n" +
                 $"- Cantidad: {cantidadStepper.Value}\n" +
-                $"- Método de Pago: {metodoPago}\n" +
+                $"- Método de Pago: {metodoPagoSeleccionado}\n" +
                 $"- Método de Entrega: {metodoSucursal}\n" +
                 $"- Número de Pedido: {NumeroPedido}",
                 "Aceptar");
         }
+
     }
 }
