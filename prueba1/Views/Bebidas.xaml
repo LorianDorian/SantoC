@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Bebidas"
-             Title="Bebidas">
+              BackgroundColor="{StaticResource PrimaryColor}"
+             Title="">
     <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
         <Image       Source="bebidafria.png"
       HeightRequest="75"
@@ -16,7 +17,7 @@ FontSize="Medium"
 FontAttributes="Bold"
 HorizontalOptions="Center" />
 
-        <Grid BackgroundColor="#FFCC80" HeightRequest="100" Padding="15">
+        <Grid BackgroundColor="#FFCC80" HeightRequest="150" Padding="15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="150"/>

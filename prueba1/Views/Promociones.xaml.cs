@@ -6,4 +6,6 @@ public partial class Promociones : ContentPage
 	{
 		InitializeComponent();
 	}
+    private async void OnComprarClicked(object sender, EventArgs e)
+    { await Navigation.PushAsync(new Compra()); }
 }

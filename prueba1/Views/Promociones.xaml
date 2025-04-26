@@ -2,57 +2,106 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Promociones"
-             Title="Promociones">
+              BackgroundColor="{StaticResource PrimaryColor}"
+             Title="">
 
     <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
+        
+        
         <Label Text="Promociones"
                Style="{StaticResource Headline}"
                SemanticProperties.HeadingLevel="Level1" />
 
-        <!-- Repetible bloque de promoción -->
         <Grid BackgroundColor="#FFCC80" HeightRequest="150" Padding="15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Image Source="churro.png"
-                   HeightRequest="95"
-                   HorizontalOptions="Center"
-                   Aspect="AspectFit"
-                   Grid.Column="0" />
 
-            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
-                <Label Text="Nombre$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Descripción$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Precio$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Fechainicio$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="FechaFinaliza$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Activa$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
+            <Image Source="churro.png"
+   HeightRequest="95"
+   HorizontalOptions="Center"
+   Aspect="AspectFit"
+   Grid.Column="0" />
+
+
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="20,0,0,0">
+                <Label Text="Nombre$"
+       TextColor="Black"
+       FontAttributes="Bold"
+       HorizontalOptions="Start" />
+
+                <Label Text="Descripción$"
+       TextColor="Black"
+       FontAttributes="Bold"
+       HorizontalOptions="Start" />
+
+                <Label Text="Precio$"
+       TextColor="Black"
+       FontAttributes="Bold"
+       HorizontalOptions="Start" />
+
+                <Label Text="Disponible$"
+       TextColor="Black"
+       FontAttributes="Bold"
+       HorizontalOptions="Start" />
             </VerticalStackLayout>
+
+            <Button Text="Comprar"
+    BackgroundColor="#8B4513"
+    TextColor="White"
+    Clicked="OnComprarClicked"
+    HorizontalOptions="Center"
+    VerticalOptions="Center"
+    Grid.Column="2"/>
         </Grid>
 
-        <!-- Copia del bloque, puedes repetir cuantas promociones necesites -->
         <Grid BackgroundColor="#FFCC80" HeightRequest="150" Padding="15">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <Image Source="churro.png"
-                   HeightRequest="95"
-                   HorizontalOptions="Center"
-                   Aspect="AspectFit"
-                   Grid.Column="0" />
 
-            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center">
-                <Label Text="Nombre$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Descripción$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Precio$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Fechainicio$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="FechaFinaliza$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
-                <Label Text="Activa$" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Start" />
+            <Image Source="churro.png"
+HeightRequest="95"
+HorizontalOptions="Center"
+Aspect="AspectFit"
+Grid.Column="0" />
+
+
+            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="20,0,0,0">
+                <Label Text="Nombre$"
+    TextColor="Black"
+    FontAttributes="Bold"
+    HorizontalOptions="Start" />
+
+                <Label Text="Descripción$"
+    TextColor="Black"
+    FontAttributes="Bold"
+    HorizontalOptions="Start" />
+
+                <Label Text="Precio$"
+    TextColor="Black"
+    FontAttributes="Bold"
+    HorizontalOptions="Start" />
+
+                <Label Text="Disponible$"
+    TextColor="Black"
+    FontAttributes="Bold"
+    HorizontalOptions="Start" />
             </VerticalStackLayout>
+
+            <Button Text="Comprar"
+ BackgroundColor="#8B4513"
+ TextColor="White"
+ Clicked="OnComprarClicked"
+ HorizontalOptions="Center"
+ VerticalOptions="Center"
+ Grid.Column="2"/>
         </Grid>
 
     </VerticalStackLayout>

@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Cafe"
-             Title="Cafe">
+              BackgroundColor="{StaticResource PrimaryColor}"
+             Title="">
     <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
 
         <Image       Source="cafecito.png"
