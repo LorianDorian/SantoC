@@ -12,6 +12,6 @@ namespace prueba1.Views
         private void InitializeComponent()
         {
             throw new NotImplementedException();
-        }
+        }     
     }
 }

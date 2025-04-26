@@ -6,8 +6,18 @@
              Title="">
 
     <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
-        
-        
+        <Image       Source="descuento.png"
+      HeightRequest="75"
+      BackgroundColor="Bisque"
+      HorizontalOptions="Center"
+      Aspect="AspectFit" />
+
+        <Label Text="Menú"
+        TextColor="Black"
+        FontSize="Medium"
+        FontAttributes="Bold"
+        HorizontalOptions="Center" />
+
         <Label Text="Promociones"
                Style="{StaticResource Headline}"
                SemanticProperties.HeadingLevel="Level1" />
