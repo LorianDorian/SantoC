@@ -6,7 +6,6 @@ namespace prueba1.Views
 {
     public partial class MenuPrincipal : ContentPage
     {
-
         public class ImagenItem
         {
             public string Imagen { get; set; }
@@ -14,102 +13,144 @@ namespace prueba1.Views
         }
 
         public ObservableCollection<ImagenItem> Imagenes { get; set; } = new ObservableCollection<ImagenItem>
-{
+        {
             new ImagenItem { Imagen = "carrusel1.jpg", PaginaDestino = "Frapes" },
             new ImagenItem { Imagen = "carrusel2.jpg", PaginaDestino = "Churros" },
             new ImagenItem { Imagen = "carrusel3.jpg", PaginaDestino = "Helados" },
             new ImagenItem { Imagen = "carrusel4.jpg", PaginaDestino = "Churros" }
-};
+        };
 
         public MenuPrincipal()
         {
             InitializeComponent();
-            BindingContext = this; // Asegúrate de que esté vinculando correctamente
+            BindingContext = this;
         }
 
-        private void OnMenuClicked(object sender, EventArgs e)
+        // Método generalizado para la navegación
+        private async Task NavigateToPage(string pageName)
+        {
+            // Diccionario de páginas
+            Page page = pageName switch
+            {
+                "Churros" => new Churros(),
+                "Helados" => new Helados(),
+                "Frapes" => new Frapes(),
+                "Smoothie" => new Smoothie(),
+                "Bebidas" => new Bebidas(),
+                "Cafe" => new Cafe(),
+                "Sucursales" => new Sucursales(),
+                "AcercaDe" => new AcercaDe(),
+                "MiCuenta" => new Personal(),
+                "Promociones" => new Promociones(),
+                "Inicio" => new MainPage(),
+                _ => null
+            };
+
+            if (page != null)
+            {
+                // Navegación y ocultar menú
+                await Navigation.PushAsync(page);
+                HideMenu();
+            }
+            else
+            {
+                await DisplayAlert("Aviso", "Página no disponible.", "OK");
+            }
+        }
+
+        // Método para ocultar el menú lateral y el overlay
+        private void HideMenu()
+        {
+            MenuLateral.IsVisible = false;
+            Overlay.IsVisible = false;
+        }
+
+        // Método para mostrar el menú lateral
+        private void ShowMenu()
         {
             MenuLateral.IsVisible = true;
             Overlay.IsVisible = true;
         }
-        private void OnOverlayTapped(object sender, EventArgs e)
+
+        // Eventos para mostrar y ocultar el menú
+        private void OnMenuClicked(object sender, EventArgs e)
         {
-            MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;
+            ShowMenu();
         }
 
-        private void OnInicioClicked(object sender, EventArgs e)
+        private void OnOverlayTapped(object sender, EventArgs e)
         {
-            DisplayAlert("Inicio", "Estás en la página de inicio.", "OK");
-            MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;
+            HideMenu();
+        }
+
+        // Métodos de los botones del menú
+        private async void OnInicioClicked(object sender, EventArgs e)
+        {
+            await NavigateToPage("Inicio");
         }
 
         private async void OnAcercaDeClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AcercaDe());
-            MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;
+            await NavigateToPage("AcercaDe");
         }
+
         private async void OnSucursalesClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Sucursales());
-            MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;
+            await NavigateToPage("Sucursales");
         }
 
         private async void OnMicuentaClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Personal());
-            MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;
+            await NavigateToPage("MiCuenta");
         }
 
         private async void OnPromocionesClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Promociones());
-            MenuLateral.IsVisible = false;
+            await NavigateToPage("Promociones");
         }
+
         private async void BtnChurros(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Churros()); }
+        {
+            await NavigateToPage("Churros");
+        }
+
         private async void BtnHelados(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Helados()); }
+        {
+            await NavigateToPage("Helados");
+        }
+
         private async void BtnFrappes(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Frapes()); }
+        {
+            await NavigateToPage("Frapes");
+        }
+
         private async void BtnBebidas(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Bebidas()); }
+        {
+            await NavigateToPage("Bebidas");
+        }
+
         private async void BtnSmoothie(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Smoothie()); }
+        {
+            await NavigateToPage("Smoothie");
+        }
+
         private async void BtnCafe(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Cafe());}
+        {
+            await NavigateToPage("Cafe");
+        }
+
         private async void btnCerrar(object sender, EventArgs e)
-        { await Navigation.PushAsync(new MainPage()); }
+        {
+            await NavigateToPage("Inicio");
+        }
+
+        // Método para manejar el clic en las imágenes del carrusel
         private async void OnImagenClicked(object sender, EventArgs e)
         {
             if (sender is ImageButton boton && boton.BindingContext is ImagenItem item)
             {
-                switch (item.PaginaDestino)
-                {
-                    case "Churros":
-                        await Navigation.PushAsync(new Churros());
-                        break;
-                    case "Helados":
-                        await Navigation.PushAsync(new Helados());
-                        break;
-                    case "Frapes":
-                        await Navigation.PushAsync(new Frapes());
-                        break;
-                    case "Smoothie":
-                        await Navigation.PushAsync(new Smoothie());
-                        break;
-                    default:
-                        await DisplayAlert("Aviso", "Página no disponible.", "OK");
-                        break;
-                }
+                await NavigateToPage(item.PaginaDestino);
             }
         }
-
-
     }
 }
-

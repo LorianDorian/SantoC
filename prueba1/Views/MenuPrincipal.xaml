@@ -1,22 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.MenuPrincipal"
              BackgroundColor="{StaticResource PrimaryColor}"
-             Title="" >
+             Title="Menú Principal">
 
     <ScrollView>
-        <Grid >
+        <Grid>
 
             <!-- Menú lateral -->
             <StackLayout x:Name="MenuLateral"
-             BackgroundColor="#eeeeee"
-             Padding="20"
-             WidthRequest="200"
-             IsVisible="False"
-             VerticalOptions="Fill"
-             HorizontalOptions="Start"
-             Spacing="1"
-             ZIndex="2">
+                         BackgroundColor="#eeeeee"
+                         Padding="20"
+                         WidthRequest="200"
+                         IsVisible="False"
+                         VerticalOptions="Fill"
+                         HorizontalOptions="Start"
+                         Spacing="1"
+                         ZIndex="2">
                 <Label Text="Menú" FontAttributes="Bold" FontSize="11" />
                 <Button Text="Inicio" Clicked="OnInicioClicked" Margin="0,30,0,0" BackgroundColor="Transparent" TextColor="Black" />
                 <Button Text="Mi cuenta" Clicked="OnMicuentaClicked" BackgroundColor="Transparent" TextColor="Black" />
@@ -71,51 +72,49 @@
                         Grid.Column="2"/>
                 </Grid>
 
-                                <CarouselView 
+                <!-- Carrusel de imágenes -->
+                <CarouselView 
                     ItemsSource="{Binding Imagenes}" 
                     HeightRequest="350"
                     WidthRequest="350"
                     Loop="True"
                     HorizontalOptions="Center">
-
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <ImageButton 
-                Source="{Binding Imagen}" 
-                Aspect="AspectFill"
-                Clicked="OnImagenClicked"/>
+                                Source="{Binding Imagen}" 
+                                Aspect="AspectFill"
+                                Clicked="OnImagenClicked"/>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
 
-
-
-
+                <!-- Sección de categorías -->
                 <Grid ColumnDefinitions="*,*" Padding="25">
                     <!-- Churros -->
                     <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
                         <ImageButton Source="churro.png"
-                     HeightRequest="75"
-                     BackgroundColor="Bisque"
-                     Clicked="BtnChurros"
-                     Aspect="AspectFit"/>
+                                     HeightRequest="75"
+                                     BackgroundColor="Bisque"
+                                     Clicked="BtnChurros"
+                                     Aspect="AspectFit"/>
                         <Label Text="Churros"
-               TextColor="Black"
-               FontSize="Header"
-               HorizontalOptions="Center"/>
+                               TextColor="Black"
+                               FontSize="Header"
+                               HorizontalOptions="Center"/>
                     </VerticalStackLayout>
 
                     <!-- Helados -->
                     <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
                         <ImageButton Source="helado.png"
-                     HeightRequest="75"
-                     BackgroundColor="Bisque"
-                     Clicked="BtnHelados"
-                     Aspect="AspectFit"/>
+                                     HeightRequest="75"
+                                     BackgroundColor="Bisque"
+                                     Clicked="BtnHelados"
+                                     Aspect="AspectFit"/>
                         <Label Text="Helados"
-               TextColor="Black"
-               FontSize="Header"
-               HorizontalOptions="Center"/>
+                               TextColor="Black"
+                               FontSize="Header"
+                               HorizontalOptions="Center"/>
                     </VerticalStackLayout>
                 </Grid>
 
@@ -123,27 +122,27 @@
                     <!-- Frappé -->
                     <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
                         <ImageButton Source="frape.png"
-                     HeightRequest="75"
-                     BackgroundColor="Bisque"
-                     Clicked="BtnFrappes"
-                     Aspect="AspectFit"/>
+                                     HeightRequest="75"
+                                     BackgroundColor="Bisque"
+                                     Clicked="BtnFrappes"
+                                     Aspect="AspectFit"/>
                         <Label Text="Frappés"
-               TextColor="Black"
-               FontSize="Header"
-               HorizontalOptions="Center"/>
+                               TextColor="Black"
+                               FontSize="Header"
+                               HorizontalOptions="Center"/>
                     </VerticalStackLayout>
 
-                    <!-- Bebida fria -->
+                    <!-- Bebida fría -->
                     <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
                         <ImageButton Source="bebidafria.png"
-                     HeightRequest="75"
-                     BackgroundColor="Bisque"
-                     Clicked="BtnBebidas"
-                     Aspect="AspectFit"/>
+                                     HeightRequest="75"
+                                     BackgroundColor="Bisque"
+                                     Clicked="BtnBebidas"
+                                     Aspect="AspectFit"/>
                         <Label Text="Bebidas Frias"
-               TextColor="Black"
-               FontSize="Header"
-               HorizontalOptions="Center"/>
+                               TextColor="Black"
+                               FontSize="Header"
+                               HorizontalOptions="Center"/>
                     </VerticalStackLayout>
                 </Grid>
 
@@ -151,31 +150,29 @@
                     <!-- Smoothie -->
                     <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
                         <ImageButton Source="smothie.png"
-                     HeightRequest="75"
-                     BackgroundColor="Bisque"
-                     Clicked="BtnSmoothie"
-                     Aspect="AspectFit"/>
+                                     HeightRequest="75"
+                                     BackgroundColor="Bisque"
+                                     Clicked="BtnSmoothie"
+                                     Aspect="AspectFit"/>
                         <Label Text="Smoothie"
-               TextColor="Black"
-               FontSize="Header"
-               HorizontalOptions="Center"/>
+                               TextColor="Black"
+                               FontSize="Header"
+                               HorizontalOptions="Center"/>
                     </VerticalStackLayout>
 
                     <!-- Café -->
                     <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
                         <ImageButton Source="cafecito.png"
-                     HeightRequest="75"
-                     BackgroundColor="Bisque"
-                     Clicked="BtnCafe"
-                     Aspect="AspectFit"/>
+                                     HeightRequest="75"
+                                     BackgroundColor="Bisque"
+                                     Clicked="BtnCafe"
+                                     Aspect="AspectFit"/>
                         <Label Text="Café"
-               TextColor="Black"
-               FontSize="Header"
-               HorizontalOptions="Center"/>
+                               TextColor="Black"
+                               FontSize="Header"
+                               HorizontalOptions="Center"/>
                     </VerticalStackLayout>
                 </Grid>
-
-
             </VerticalStackLayout>
         </Grid>
     </ScrollView>
