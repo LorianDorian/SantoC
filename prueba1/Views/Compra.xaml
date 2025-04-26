@@ -57,10 +57,10 @@
             <!-- Campos adicionales solo para "Tarjeta" -->
             <StackLayout x:Name="tarjetaFields" IsVisible="False">
                 <Label Text="Número de tarjeta:" FontAttributes="Bold" />
-                <Entry x:Name="entryNumeroTarjeta" Placeholder="Ingrese el número de tarjeta" Keyboard="Numeric" />
+                <Entry x:Name="entryNumeroTarjeta" Placeholder="XXXX-XXXX-XXXX-XXXX" Keyboard="Numeric" />
 
                 <Label Text="Nombre en tarjeta:" FontAttributes="Bold" />
-                <Entry x:Name="entryNombreTarjeta" Placeholder="Nombre como aparece en la tarjeta" Keyboard="Text" />
+                <Entry x:Name="entryNombreTarjeta" Placeholder="Nombre del titular de la tarjeta" Keyboard="Text" />
 
                 <Label Text="Fecha de vencimiento:" FontAttributes="Bold" />
                 <Entry x:Name="entryFechaVencimiento" Placeholder="MM/AA" Keyboard="Text" />

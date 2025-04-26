@@ -59,10 +59,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Views\MenuLateral2.xaml.cs" />
 	  <Compile Remove="Views\NewPage1.xaml.cs" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Remove="Views\MenuLateral2.xaml" />
 	  <MauiXaml Remove="Views\NewPage1.xaml" />
 	</ItemGroup>
 

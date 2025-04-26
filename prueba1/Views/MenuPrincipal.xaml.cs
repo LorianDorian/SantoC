@@ -28,37 +28,48 @@ namespace prueba1.Views
         }
 
         private void OnMenuClicked(object sender, EventArgs e)
-        {MenuLateral.IsVisible = true;
-            Overlay.IsVisible = true;}
-
+        {
+            MenuLateral.IsVisible = true;
+            Overlay.IsVisible = true;
+        }
         private void OnOverlayTapped(object sender, EventArgs e)
-        {MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;}
+        {
+            MenuLateral.IsVisible = false;
+            Overlay.IsVisible = false;
+        }
 
         private void OnInicioClicked(object sender, EventArgs e)
-        {DisplayAlert("Inicio", "Estás en la página de inicio.", "OK");
+        {
+            DisplayAlert("Inicio", "Estás en la página de inicio.", "OK");
             MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false; }
+            Overlay.IsVisible = false;
+        }
 
         private async void OnAcercaDeClicked(object sender, EventArgs e)
-        { await Navigation.PushAsync(new AcercaDe());
+        {
+            await Navigation.PushAsync(new AcercaDe());
             MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false; }
+            Overlay.IsVisible = false;
+        }
+        private async void OnSucursalesClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Sucursales());
+            MenuLateral.IsVisible = false;
+            Overlay.IsVisible = false;
+        }
+
         private async void OnMicuentaClicked(object sender, EventArgs e)
-        {await Navigation.PushAsync(new Personal());
+        {
+            await Navigation.PushAsync(new Personal());
             MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;}
+            Overlay.IsVisible = false;
+        }
 
         private async void OnPromocionesClicked(object sender, EventArgs e)
-        {await Navigation.PushAsync(new Promociones());
+        {
+            await Navigation.PushAsync(new Promociones());
             MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;}
-
-        private async void OnSucursalesClicked(object sender, EventArgs e)
-        { await Navigation.PushAsync(new Sucursales());
-            MenuLateral.IsVisible = false;
-            Overlay.IsVisible = false;}
-
+        }
         private async void BtnChurros(object sender, EventArgs e)
         { await Navigation.PushAsync(new Churros()); }
         private async void BtnHelados(object sender, EventArgs e)
