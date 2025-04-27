@@ -2,37 +2,67 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Personal"
-              BackgroundColor="{StaticResource PrimaryColor}"
+             BackgroundColor="{StaticResource PrimaryColor}"
              Title="">
-    <VerticalStackLayout>
-        <Grid ColumnDefinitions="Auto,*" Padding="14" VerticalOptions="Start" >
-            <!-- Logo a la izquierda -->
-            <Image 
-        Source="santochurro.png"
-        HeightRequest="180"
-        WidthRequest="180"
-        Aspect="AspectFit"
-        Grid.Column="0" />
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="5">
 
-            <!-- Texto a la derecha -->
-            <Label 
-        Text="Mi Cuenta:&#10;Hola, (nombre de usuario)"
-        Style="{StaticResource Headline}"
-        SemanticProperties.HeadingLevel="Level2"
-        FontSize="Title"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Grid.Column="1" />
-        </Grid>
+            <!-- Parte superior: Logo + Bienvenida -->
+            <Grid ColumnDefinitions="Auto,*" Padding="0" VerticalOptions="Start">
+                <Image 
+                    Source="santochurro.png"
+                    HeightRequest="180"
+                    WidthRequest="180"
+                    Aspect="AspectFit"
+                    Grid.Column="0" />
+
+                <Label 
+                    Text="Mi Cuenta:&#10;&#10;Hola, (nombre de usuario)"
+                        TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start"
+                        Grid.Column="1"/>
+            </Grid>
+
+            <!-- Botones -->
+            <Button Text="Nombre      >>" Clicked="EditarNombre" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,5,20,0"/>
+            <Button Text="Correo      >>" Clicked="EditarCorreo" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+            <Button Text="Teléfono      >>" Clicked="EditarTelefono" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+            <Button Text="Dirección      >>" Clicked="EditarDireccion" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
 
 
-        <Button Text="Nombre      >>" Clicked="EditarNombre" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,5,20,0"/>
-        <Button Text="Correo      >>" Clicked="EditarCorreo" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
-        <Button Text="Telefono      >>" Clicked="EditarTelefono" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
-        <Button Text="Dirección      >>" Clicked="EditarDireccion" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
-        <Button Text="Mis pedidos anteriores      >>" Clicked="PedidosAnteriores" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+            <!-- Fecha de actividad -->
+            <Label Text="Activo desde: (fecha)" BackgroundColor="Transparent" TextColor="Black" HorizontalOptions="Start" Margin="20,25,20,0"/>
 
-        <Label Text="Activo desde: (fecha)"  BackgroundColor="Transparent" TextColor="Black" HorizontalOptions="Fill" Margin="20,25,20,0"/>
+            <!-- Título de pedidos anteriores -->
+            <Grid BackgroundColor="#8B4513" HeightRequest="40" Padding="10" RowSpacing="8">
+                <Label Text="Pedidos anteriores"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Start" />
+            </Grid>
+            <Grid BackgroundColor="Bisque" HeightRequest="200" Padding="10" RowSpacing="8">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
 
-    </VerticalStackLayout>
+                <Label Text="Núero de Pedido: [ID]" FontAttributes="Bold" TextColor="Black" Grid.Row="0"/>
+                <Label Text="Cliente: [Nombre Cliente]" FontAttributes="Bold" TextColor="Black" Grid.Row="1"/>
+                <Label Text="Sucursal: [Nombre Sucursal]" FontAttributes="Bold" TextColor="Black" Grid.Row="2"/>
+                <Label Text="Tipo de Pago: [Tipo Pago]" FontAttributes="Bold" TextColor="Black" Grid.Row="3"/>
+                <Label Text="Fecha: [Fecha]" FontAttributes="Bold" TextColor="Black" Grid.Row="4"/>
+                <Label Text="Estado: [Estado]" FontAttributes="Bold" TextColor="Black" Grid.Row="5"/>
+                <Label Text="Total: [Total]" FontAttributes="Bold" TextColor="DarkRed" Grid.Row="6"/>
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

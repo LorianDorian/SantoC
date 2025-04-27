@@ -15,15 +15,19 @@ namespace prueba1
         }
         private async void OnLoginClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new HomePage());
+            await Navigation.PushAsync(new Menu());
         }
 
 
         private async void OnLoginClicked2(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MenuPrincipal());
+            await Navigation.PushAsync(new MenuPrincipal()); }
 
-        } 
+        private async void OnInvitado(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new MenuPrincipal());
+        }
+
         private async void OnLoginClicked3(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Registro());

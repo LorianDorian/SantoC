@@ -18,8 +18,9 @@ public partial class App : Application
         InitializeComponent();
         MainPage = new NavigationPage(new MainPage())
         {
-            BarBackgroundColor = Color.FromArgb("#FFF5E1"), // El color que quieras para la "franja"
-            BarTextColor = Colors.Black         // El color del texto (por ejemplo, negro para texto claro)
+            BarBackgroundColor = Color.FromHex("#FFF5E1"),  // Color personalizado de fondo
+            BarTextColor = Color.FromHex("#A9A9A9")                       // Negro para el texto
+
         };
 #if ANDROID
         if (OperatingSystem.IsAndroidVersionAtLeast(21))
@@ -27,7 +28,7 @@ public partial class App : Application
             AndroidWindow? androidStatusBarWindow = Microsoft.Maui.ApplicationModel.Platform.CurrentActivity?.Window;
             if (androidStatusBarWindow != null)
             {
-                androidStatusBarWindow.SetStatusBarColor(Colors.Beige.ToPlatform());
+                androidStatusBarWindow.SetStatusBarColor(Colors.White.ToPlatform());
             }
         }
 
@@ -55,8 +56,8 @@ public partial class App : Application
                 AndroidWindow? androidWindow = Microsoft.Maui.ApplicationModel.Platform.CurrentActivity?.Window;
                 if (androidWindow != null)
                 {
-                    androidWindow.SetStatusBarColor(Colors.Beige.ToPlatform());
-                    androidWindow.SetNavigationBarColor(Colors.Beige.ToPlatform());
+                    androidWindow.SetStatusBarColor(Colors.White.ToPlatform());
+                    androidWindow.SetNavigationBarColor(Colors.AntiqueWhite.ToPlatform());
 
                     if (OperatingSystem.IsAndroidVersionAtLeast(23))
                     {

@@ -41,7 +41,7 @@
             </BoxView>
 
             <!-- Contenido principal -->
-            <VerticalStackLayout Padding="30" Spacing="20" ZIndex="0">
+            <VerticalStackLayout Padding="25" Spacing="20" ZIndex="0">
 
                 <!-- Encabezado con logo y botón -->
                 <Grid ColumnDefinitions="Auto, *" VerticalOptions="Start">
@@ -61,8 +61,8 @@
                         Grid.Column="1" />
                     <Button
                         Text="Cerrar sesión"
-                        BackgroundColor="Moccasin"
-                        TextColor="Black"
+                        BackgroundColor="#8B4513"
+                        TextColor="White"
                         Clicked="btnCerrar"
                         HeightRequest="35"
                         WidthRequest="120"

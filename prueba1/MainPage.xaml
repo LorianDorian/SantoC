@@ -4,9 +4,7 @@
              x:Class="prueba1.MainPage"
              BackgroundColor="{StaticResource PrimaryColor}">
 
-
-    <ScrollView>
-        <VerticalStackLayout Padding="30" Spacing="18">
+        <VerticalStackLayout Padding="20" Spacing="15">
     
             <Grid ColumnDefinitions="*,Auto" Padding="10" VerticalOptions="Start">
                 <!-- Logo a la izquierda -->
@@ -46,6 +44,7 @@
 
             <Button Text="Menú sin Conexión"
                 Clicked="OnLoginClicked"
+                FontAttributes="Bold"
                 BackgroundColor="#8B4513"
                 HorizontalOptions="Fill"/>
             
@@ -59,7 +58,10 @@
                     TextColor="White"
                     Clicked="OnLoginClicked3"
                     HorizontalOptions="Fill" />
+            <Button Text="Ingresar como Invitado" FontAttributes="Bold"
+                    Clicked="OnInvitado" BackgroundColor="Gray"
+                    TextColor="Black" />
         </VerticalStackLayout>
-    </ScrollView>
+
 
 </ContentPage>

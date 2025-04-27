@@ -4,7 +4,21 @@
              x:Class="prueba1.Views.Sucursales"
               BackgroundColor="{StaticResource PrimaryColor}"
              Title="">
-    <VerticalStackLayout Padding="30" Spacing="1">
+    <ScrollView>
+        <VerticalStackLayout Padding="17" Spacing="5">
+
+        <Image       Source="sucursal1.png"
+             HeightRequest="75"
+             BackgroundColor="Bisque"
+             HorizontalOptions="Center"
+             Aspect="AspectFit" />
+
+        <Label Text="Sucursales"
+       TextColor="Black"
+       FontSize="Medium"
+       FontAttributes="Bold"
+       HorizontalOptions="Center" /> 
+        
         <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
             <Label Text="El Santo Churro - Pie de la Cuesta"
                TextColor="Black"
@@ -15,8 +29,7 @@
         <Image
          Source="sucursalpie.jpg"
          HeightRequest="180"
-         WidthRequest="280"
-         Aspect="AspectFit"/>
+         WidthRequest="280" Aspect="AspectFit"/>
 
         <Label Text=" Dirección: ()"
        FontSize="17"
@@ -42,7 +55,36 @@
        VerticalOptions="Center"
        Margin="10,5,10,0"/>
 
-        <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
+        <!-- Botón cafecito -->
+        <Button x:Name="BotonDesplegar"
+                Text="Mostrar Horario"
+                BackgroundColor="#8B4513"  
+            TextColor="White"
+                Clicked="BotonDesplegar_Clicked"
+                WidthRequest="200"
+                HeightRequest="50"
+                CornerRadius="10"/>
+
+            <!-- Labels ocultos inicialmente -->
+            <VerticalStackLayout x:Name="DetallesLayout" IsVisible="False" Spacing="10">
+            <Label 
+                                Text="Horario de atención:&#10;
+                            Sábado: 11 a.m.–9 p.m.&#10;
+                            Domingo: 11 a.m.–9 p.m.&#10;
+                            Lunes: 11 a.m.–9 p.m.&#10;
+                            Martes: 11 a.m.–9 p.m.&#10;
+                            Miércoles: 11 a.m.–9 p.m.&#10;
+                            Jueves: 11 a.m.–9 p.m.&#10;
+                            Viernes: 11 a.m.–9 p.m."
+                                TextColor="Black"
+                                FontSize="14"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Start"
+        LineHeight="1.5" />     
+        </VerticalStackLayout>
+
+
+            <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
             <Label Text="El Santo Churro - Costera"
                TextColor="Black"
                FontAttributes="Bold"
@@ -79,6 +121,35 @@
        TextColor="Black"             
        VerticalOptions="Center"
        Margin="10,5,10,0"/>
+        <!-- Botón cafecito -->
+        <Button x:Name="BotonDesplegar2"
+                Text="Mostrar Horario"
+                BackgroundColor="#8B4513"  
+            TextColor="White"
+                Clicked="BotonDesplegar_Clicked2"
+                WidthRequest="200"
+                HeightRequest="50"
+                CornerRadius="10"/>
 
+        <!-- Labels ocultos inicialmente -->
+        <VerticalStackLayout x:Name="DetallesLayout2" IsVisible="False" Spacing="10">
+            <Label 
+                                Text="Horario de atención:&#10;
+                            Sábado: 10 a.m.–9:30 p.m.&#10;
+                            Domingo: 10 a.m.–9:30 p.m.&#10;
+                            Lunes: 10 a.m.–9:30 p.m.&#10;
+                            Martes: 10 a.m.–9:30 p.m.&#10;
+                            Miércoles: 10 a.m.–9:30 p.m.&#10;
+                            Jueves: 10 a.m.–9:30 p.m.&#10;
+                            Viernes: 10 a.m.–9:30 p.m."
+                                TextColor="Black"
+                                FontSize="14"
+                                HorizontalOptions="Center"
+                                VerticalOptions="Start"
+        LineHeight="1.5" />
+        </VerticalStackLayout>
+
+        
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

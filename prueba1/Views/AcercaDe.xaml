@@ -4,7 +4,7 @@
              xmlns:views="clr-namespace:prueba1.Views"
              x:Class="prueba1.Views.AcercaDe"
              BackgroundColor="{StaticResource PrimaryColor}"
- Title="AcercaDe">
+ Title="">
 
     <Grid>
         <!-- Menú lateral -->
@@ -29,7 +29,7 @@
                 <!-- Facebook -->
                 <Grid ColumnDefinitions="Auto,*" Padding="5">
                     <Image Source="facebook.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
-                    <Label Text="Facebook: @El Santo Churro"
+                    <Label Text="  Facebook: @El Santo Churro"
                            TextColor="Blue"
                            FontAttributes="Bold"
                            VerticalOptions="Center"
@@ -43,7 +43,7 @@
                 <!-- Instagram -->
                 <Grid ColumnDefinitions="Auto,*" Padding="5">
                     <Image Source="instagram.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
-                    <Label Text="Instagram: @elsantochurromx"
+                    <Label Text="  Instagram: @elsantochurromx"
                            TextColor="Violet"
                            FontAttributes="Bold"
                            VerticalOptions="Center"
@@ -57,7 +57,7 @@
                 <!-- Correo -->
                 <Grid ColumnDefinitions="Auto,*" Padding="5">
                     <Image Source="correo.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
-                    <Label Text="Correo: elsantochurromx@gmail.com"
+                    <Label Text="  Correo: elsantochurromx@gmail.com"
                            TextColor="Gray"
                            FontAttributes="Bold"
                            VerticalOptions="Center"
@@ -67,7 +67,7 @@
                 <!-- Sitio web -->
                 <Grid ColumnDefinitions="Auto,*" Padding="5">
                     <Image Source="sitioweb.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
-                    <Label Text="Sitio web"
+                    <Label Text="  Sitio web"
                            TextColor="Gray"
                            FontAttributes="Bold"
                            VerticalOptions="Center"
@@ -81,7 +81,7 @@
                 <!-- Teléfono -->
                 <Grid ColumnDefinitions="Auto,*" Padding="5">
                     <Image Source="telefono.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
-                    <Label Text="Teléfono: 744 174 7637"
+                    <Label Text="  Teléfono: 744 174 7637"
                            TextColor="Gray"
                            FontAttributes="Bold"
                            VerticalOptions="Center"
@@ -91,7 +91,7 @@
                 <!-- Dirección -->
                 <Grid ColumnDefinitions="Auto,*" Padding="5">
                     <Image Source="ubicacion.png" HeightRequest="40" WidthRequest="40" Aspect="AspectFit" />
-                    <Label Text="Dirección: Calz Pie de la Cuesta 239-Interior Chedraui,&#10;Pie de La Cuesta, 39580 Acapulco de Juárez, Gro"
+                    <Label Text="   Dirección: Calz Pie de la Cuesta 239-Interior &#10;   Chedraui,  Pie de La Cuesta, 39580 Acapulco &#10;   de Juárez, Gro"
                            TextColor="Gray"
                            FontAttributes="Bold"
                            VerticalOptions="Center"
