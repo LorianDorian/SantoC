@@ -1,11 +1,14 @@
-namespace prueba1.Views;
+using System;
+using Microsoft.Maui.Controls;
 
-public partial class Helados : ContentPage
+namespace prueba1.Views
 {
-	public Helados()
-	{
-		InitializeComponent();
-	}
-    private async void OnComprarClicked(object sender, EventArgs e)
-    { await Navigation.PushAsync(new Compra()); }
+    public partial class Helados : ContentPage
+    {
+        public Helados()
+        {
+            InitializeComponent();
+        }    
+
+    }
 }
