@@ -12,15 +12,7 @@ public partial class Churros : ContentPage
         "Piña Colada","Fresa","Zarzamora","Caramelo","Maple","Mango"};
         Sabores.ItemsSource = SaboresRudo;
     }
-    private void OnSabor(object sender, EventArgs e)
-    {
-        if (Sabores.SelectedIndex != -1)
-        {
 
-            string saborseleccionado = SaboresRudo[Sabores.SelectedIndex];
-            Seleccion.Text = $"Sabor elegido:{saborseleccionado}";
-        }
-    }
     private async void OnComprarClicked(object sender, EventArgs e)
     { await Navigation.PushAsync(new Compra()); }
     private void BotonDesplegar_Clicked(object sender, EventArgs e)
@@ -47,6 +39,11 @@ public partial class Churros : ContentPage
     {
         // Si el CheckBox está marcado, mostramos el Picker
         SaboresPicker2.IsVisible = e.Value;
+    }
+    private void OnSabor(object sender, EventArgs e)
+    {
+        // Acción al presionar el botón
+        DisplayAlert("Churros", "¡Elegiste un sabor!", "OK");
     }
     private async void OnComprarDark(object sender, EventArgs e)
     { await Navigation.PushAsync(new Compra()); }

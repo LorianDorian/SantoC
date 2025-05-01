@@ -2,39 +2,38 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Frapes"
-              BackgroundColor="{StaticResource PrimaryColor}"
+             BackgroundColor="{StaticResource PrimaryColor}"
              Title="">
-    <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
-        <Image       Source="frape.png"
-      HeightRequest="75"
-      BackgroundColor="Bisque"
-      HorizontalOptions="Center"
-      Aspect="AspectFit" />
+    <ScrollView>
+        <Grid>
+            <VerticalStackLayout Padding="0" Spacing="15" HorizontalOptions="Center">
+            <Image Source="frape.png"
+                   HeightRequest="75"
+                   BackgroundColor="Bisque"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit" />
 
-        <Label Text="Frappés"
-        TextColor="Black"
-        FontSize="Medium"
-        FontAttributes="Bold"
-        HorizontalOptions="Center" />
+            <Label Text="Frappés"
+                   TextColor="Black"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
 
-        <Label Text="SANTO FRAPPE BASE LECHE"
-             TextColor="Black"
-             FontSize="Subtitle"
-             FontAttributes="Bold"
-             HorizontalOptions="Center" />
+            <Label Text="SANTO FRAPPE BASE LECHE"
+                   TextColor="Black"
+                   FontSize="Subtitle"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
 
+            <Grid BackgroundColor="#FFCC80" HeightRequest="40" Padding="10">
+                <Label Text="Incluye crema batida"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+            </Grid>
 
-        <Grid BackgroundColor="#FFCC80" HeightRequest="60" Padding="10">
-            <Label 
-            Text="Incuye crema batida"
-            TextColor="Black"
-            FontAttributes="Bold"
-            VerticalOptions="Center"
-            HorizontalOptions="Center" />
-        </Grid>
-        
-        
-        <Label Text="Elige el tamaño:" FontAttributes="Bold" />
+            <Label Text="Elige el tamaño:" FontAttributes="Bold" />
             <Picker x:Name="pickerSucursal">
                 <Picker.Items>
                     <x:String>Mediano  $89</x:String>
@@ -43,44 +42,102 @@
             </Picker>
 
             <Button x:Name="BotonDesplegar"
-           Text="Mostrar Sabores:"
-           FontAttributes="Bold"
-           BackgroundColor="Bisque" 
-           TextColor="Black"
-           Clicked="BotonDesplegar_Clicked"
-           WidthRequest="140"
-           HeightRequest="0"
-           CornerRadius="56"/>
+                    Text="Mostrar Sabores:"
+                    FontAttributes="Bold"
+                    BackgroundColor="Bisque"
+                    TextColor="Black"
+                    Clicked="BotonDesplegar_Clicked"
+                    WidthRequest="330"
+                    HeightRequest="0"
+                    CornerRadius="56" />
 
             <!-- Labels ocultos inicialmente -->
             <VerticalStackLayout x:Name="DetallesLayout" IsVisible="False" Spacing="0">
-
-                <Label 
-                           Text="Seleccione un sabor de Churro"
-                           TextColor="Black"
-                           FontSize="14"
-                           HorizontalOptions="Center"
-                           VerticalOptions="Start"
-                           LineHeight="1.5" />
-                <Picker
-               x:Name="Sabores"
-               Title="Seleccione el sabor"            
-               SelectedIndexChanged="OnSabor"
-               Background="Bisque"
-               TitleColor="#8B4513"
-               TextColor="Black"
-               Margin="20"/>
-
-                <Label          
-           x:Name="Seleccion"           
-          Text="Has seleccionado:"
-          TextColor="Black"
-          FontSize="14"
-          HorizontalOptions="Center"
-          VerticalOptions="Start"
-          LineHeight="1.5" />
+                <Label Text="Seleccione un sabor de Churro"
+                       TextColor="Black"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       LineHeight="1.5" />
+                <Picker x:Name="Sabores"
+                        Title="Seleccione el sabor"
+                        SelectedIndexChanged="OnSabor"
+                        Background="Bisque"
+                        TitleColor="#8B4513"
+                        TextColor="Black"
+                        Margin="10" />
             </VerticalStackLayout>
 
+            <Button Text="Comprar"
+                    BackgroundColor="#8B4513"
+                    TextColor="White"
+                    Clicked="OnComprarBL"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" 
+                    WidthRequest="330"
+                    HeightRequest="0"
+                    CornerRadius="36"/>
 
-    </VerticalStackLayout>
+            <Label Text="SANTO FRAPPE BASE YOGURT"
+                   TextColor="Black"
+                   FontSize="Subtitle"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Grid BackgroundColor="#FFCC80" HeightRequest="40" Padding="10">
+                <Label Text="Incluye crema batida"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+            </Grid>
+
+            <Label Text="Elige el tamaño:" FontAttributes="Bold" />
+            <Picker x:Name="pickerSucursal1" >
+                <Picker.Items>
+                    <x:String>Mediano  $95</x:String>
+                    <x:String>Grandote $99</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button x:Name="BotonDesplegar1"
+                    Text="Mostrar Sabores:"
+                    FontAttributes="Bold"
+                    BackgroundColor="Bisque"
+                    TextColor="Black"
+                    Clicked="BotonDesplegar_Clicked1"
+                    WidthRequest="330"
+                    HeightRequest="0"
+                    CornerRadius="56" />
+
+            <!-- Labels ocultos inicialmente -->
+            <VerticalStackLayout x:Name="DetallesLayout1" IsVisible="False" Spacing="0">
+                <Label Text="Seleccione un sabor de Churro"
+                       TextColor="Black"
+                       FontSize="14"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       LineHeight="1.5" />
+                <Picker x:Name="SaboresY"
+                        Title="Seleccione el sabor"
+                        SelectedIndexChanged="OnSabor1"
+                        Background="Bisque"
+                        TitleColor="#8B4513"
+                        TextColor="Black"
+                        Margin="10" />
+            </VerticalStackLayout>
+
+            <Button Text="Comprar"
+                    BackgroundColor="#8B4513"
+                    TextColor="White"
+                    Clicked="OnComprarBL1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" 
+                    WidthRequest="330"
+                    HeightRequest="0"
+                    CornerRadius="36"/>
+        </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
 </ContentPage>

@@ -4,14 +4,20 @@ namespace prueba1.Views;
 public partial class Frapes : ContentPage
 {
 
-    public List<string> SaboresRudo { get; set; }
+    public List<string> SaboresLeche { get; set; }
+    public List<string> SaboresYogurt { get; set; }
+
     public Frapes()
 	{
 		InitializeComponent();
-        SaboresRudo = new List<string>
+        SaboresLeche = new List<string>
         { "Cajeta Coronado","Lechera","Chocolate Hersheys","Queso Crema","Nutella","Chocolate Blanco",
         "Piña Colada","Fresa","Zarzamora","Caramelo","Maple","Mango"};
-        Sabores.ItemsSource = SaboresRudo;
+        Sabores.ItemsSource = SaboresLeche;
+
+        SaboresYogurt = new List<string>
+        { "Sandia","Lychee","Frambuesa","Kiwi","Maracuyá","Fresa","Zarzamora","Mango","Piña Colada","Taro","Coco","Durazno"};
+        SaboresY.ItemsSource = SaboresYogurt;
 
     }
     private async void OnComprarClicked(object sender, EventArgs e)
@@ -31,15 +37,37 @@ public partial class Frapes : ContentPage
             BotonDesplegar.Text = "Mostrar Sabores:";
         }
     }
-        
+    private async void OnComprarBL(object sender, EventArgs e)
+    { await Navigation.PushAsync(new Compra()); }
+
     private void OnSabor(object sender, EventArgs e)
     {
-        if (Sabores.SelectedIndex != -1)
-        {
-
-            string saborseleccionado = SaboresRudo[Sabores.SelectedIndex];
-            Seleccion.Text = $"Sabor elegido:{saborseleccionado}";
-        }
+        // Acción al presionar el botón
+        DisplayAlert("Churros", "¡Elegiste un sabor!", "OK");
+    }
+    private void OnSabor1(object sender, EventArgs e)
+    {
+        // Acción al presionar el botón
+        DisplayAlert("Churros", "¡Elegiste un sabor!", "OK");
     }
 
+    private async void OnComprarClicked1(object sender, EventArgs e)
+    { await Navigation.PushAsync(new Compra()); }
+    private void BotonDesplegar_Clicked1(object sender, EventArgs e)
+    {
+        // Cambia la visibilidad
+        DetallesLayout1.IsVisible = !DetallesLayout1.IsVisible;
+
+        // Opcional: cambia el texto del botón
+        if (DetallesLayout1.IsVisible)
+        {
+            BotonDesplegar1.Text = "Ocultar Sabores:";
+        }
+        else
+        {
+            BotonDesplegar1.Text = "Mostrar Sabores:";
+        }
+    }
+    private async void OnComprarBL1(object sender, EventArgs e)
+    { await Navigation.PushAsync(new Compra()); }
 }

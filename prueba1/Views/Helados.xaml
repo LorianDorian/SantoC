@@ -3,26 +3,106 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Helados"
              Title=""
-             BackgroundColor="{StaticResource PrimaryColor}">
-
+              BackgroundColor="{StaticResource PrimaryColor}">
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
-
-            <Image Source="helado.png"
-                   HeightRequest="75"
-                   BackgroundColor="Bisque"
-                   HorizontalOptions="Center"
-                   Aspect="AspectFit" />
+   
+            <VerticalStackLayout  Padding="30" Spacing="10" HorizontalOptions="Center">
+                <Image       Source="helado.png"
+                     HeightRequest="75"
+                     BackgroundColor="Bisque"
+                     HorizontalOptions="Center"
+                     Aspect="AspectFit" />
 
             <Label Text="Helados"
+       TextColor="Black"
+       FontSize="Medium"
+       FontAttributes="Bold"
+       HorizontalOptions="Center" />
+
+
+
+            <Label Text="HELADO SUAVE"
                    TextColor="Black"
-                   FontSize="Medium"
+                   FontSize="Subtitle"
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
 
-        
 
-           
+            <Grid BackgroundColor="#FFCC80" HeightRequest="40" Padding="10">
+                <Label Text="Sabor Vainilla"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+            </Grid>
+                
+                
+                
+            <Grid ColumnDefinitions="*,*" Padding="5">
+                <VerticalStackLayout Grid.Column="0" HorizontalOptions="Center">
+                    <ImageButton Source="cono.png"
+                    x:Name="btnEfectivo"
+                     HeightRequest="75"
+                     BackgroundColor="Bisque"
+                     Clicked="OnMetodoPagoClicked"
+                     Opacity="0.5"
+                     Aspect="AspectFit"/>
+                    <Label Text="En Cono"
+               TextColor="Black"
+               FontSize="Header"
+               HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                    <ImageButton Source="vaso.png"
+                     x:Name="btnTarjeta"
+                     HeightRequest="75"
+                     BackgroundColor="Bisque"
+                     Clicked="OnMetodoPagoClicked"
+                     Opacity="0.5"
+                     Aspect="AspectFit"/>
+                    <Label Text="En Vaso"
+               TextColor="Black"
+               FontSize="Header"
+               HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Grid>
+
+
+
+            <!-- Campos adicionales solo para "Tarjeta" -->
+            <StackLayout x:Name="tarjetaFields" IsVisible="False">
+                <Label Text="Elige el tamaño del vaso:" FontAttributes="Bold" />
+                <Picker x:Name="pickerSucursal">
+                    <Picker.Items>
+                        <x:String>Vaso Chico   $29</x:String>
+                        <x:String>Vaso Mediano $39</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </StackLayout>
+
+            <StackLayout x:Name="ConoFields" IsVisible="False">
+                <Label Text="Elige el tamaño del cono:" FontAttributes="Bold" />
+                <Picker x:Name="pickerCono">
+                    <Picker.Items>
+                        <x:String>Cono Sencillo $89</x:String>
+                        <x:String>Cono Doble    $95</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </StackLayout>
+
+            <Button Text="Comprar"
+                BackgroundColor="#8B4513"
+                TextColor="White"
+                Clicked="OnComprarBL5"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" 
+                WidthRequest="330"
+                HeightRequest="0"
+                CornerRadius="36"/> 
+
 
         </VerticalStackLayout>
     </ScrollView>

@@ -87,14 +87,6 @@
                 TextColor="Black"
                 Margin="20"/>
 
-            <Label          
-            x:Name="Seleccion"           
-           Text="Has seleccionado:"
-           TextColor="Black"
-           FontSize="14"
-           HorizontalOptions="Center"
-           VerticalOptions="Start"
-           LineHeight="1.5" />
         </VerticalStackLayout>
 
         <VerticalStackLayout Padding="20" Spacing="20">
