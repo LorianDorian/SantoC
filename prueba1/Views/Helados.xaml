@@ -19,7 +19,8 @@
        FontAttributes="Bold"
        HorizontalOptions="Center" />
 
-
+            <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
 
             <Label Text="HELADO SUAVE"
                    TextColor="Black"
@@ -86,14 +87,16 @@
                 <Label Text="Elige el tamaño del cono:" FontAttributes="Bold" />
                 <Picker x:Name="pickerCono">
                     <Picker.Items>
-                        <x:String>Cono Sencillo $89</x:String>
-                        <x:String>Cono Doble    $95</x:String>
+                        <x:String>Cono Sencillo $25</x:String>
+                        <x:String>Cono Doble    $29</x:String>
                     </Picker.Items>
                 </Picker>
 
             </StackLayout>
-
-            <Button Text="Comprar"
+                    <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                    <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                    <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                    <Button Text="Comprar"
                 BackgroundColor="#8B4513"
                 TextColor="White"
                 Clicked="OnComprarBL5"
@@ -101,8 +104,9 @@
                 VerticalOptions="Center" 
                 WidthRequest="330"
                 HeightRequest="0"
-                CornerRadius="36"/> 
-
+                CornerRadius="36"/>
+                </VerticalStackLayout>
+            </Frame>
 
         </VerticalStackLayout>
     </ScrollView>

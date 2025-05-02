@@ -172,7 +172,22 @@
                                FontSize="Header"
                                HorizontalOptions="Center"/>
                     </VerticalStackLayout>
+
                 </Grid>
+
+                <!-- Embotellados -->
+                <VerticalStackLayout Grid.Column="1" HorizontalOptions="Center">
+                    <ImageButton Source="embotellados.png"
+                 HeightRequest="85"
+                 WidthRequest="190"
+                 BackgroundColor="Bisque"
+                 Clicked="BtnEmbotellados"
+                 Aspect="AspectFit"/>
+                    <Label Text="Embotellados"
+           TextColor="Black"
+           FontSize="Header"
+           HorizontalOptions="Center"/>
+                </VerticalStackLayout>
             </VerticalStackLayout>
         </Grid>
     </ScrollView>

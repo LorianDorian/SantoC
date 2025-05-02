@@ -1,16 +1,13 @@
 namespace prueba1.Views;
 
-public partial class Cafe : ContentPage
+public partial class Embotellados : ContentPage
 {
-	public Cafe()
+	public Embotellados()
 	{
 		InitializeComponent();
 	}
-    private async void OnComprarClicked(object sender, EventArgs e)
-    {
-        await Navigation.PushAsync(new Compra());
-    }
-
+    private async void OnComprarClicked1(object sender, EventArgs e)
+    { await Navigation.PushAsync(new Compra()); }
     private void OnCantidadChanged(object sender, ValueChangedEventArgs e)
     {
         if (sender is Stepper stepper && stepper.Parent is Layout layout)
@@ -26,5 +23,4 @@ public partial class Cafe : ContentPage
             }
         }
     }
-
 }

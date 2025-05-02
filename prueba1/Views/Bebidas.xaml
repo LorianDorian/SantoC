@@ -2,84 +2,113 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="prueba1.Views.Bebidas"
-              BackgroundColor="{StaticResource PrimaryColor}"
+             BackgroundColor="{StaticResource PrimaryColor}"
              Title="">
-    <VerticalStackLayout Padding="20" Spacing="15" HorizontalOptions="Center">
-        <Image       Source="bebidafria.png"
-      HeightRequest="75"
-      BackgroundColor="Bisque"
-      HorizontalOptions="Center"
-      Aspect="AspectFit" />
+
+    <ScrollView>
+        <Grid>
+            <VerticalStackLayout Padding="0" Spacing="25" HorizontalOptions="Center">
+
+                <!-- Imagen y título -->
+                <Image Source="bebidafria.png"
+                   HeightRequest="100"
+                   Aspect="AspectFit"
+                   HorizontalOptions="Center" />
 
                 <Label Text="Bebidas Frías"
-        TextColor="Black"
-        FontSize="Medium"
-        FontAttributes="Bold"
-        HorizontalOptions="Center" />
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+                <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <!-- Subtítulo -->
+                <Label Text="BEBIDA FRÍA BASE LECHE"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
 
+                <!-- Descripción -->
+                <Frame BackgroundColor="#FFCC80" CornerRadius="15" Padding="15" HasShadow="True">
+                    <Label Text="Elaborado manualmente en shakers&#10;¡Descubre su sabor más íntimo en cada sorbo!"
+                       FontSize="14"
+                       FontAttributes="Bold"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center" />
+                </Frame>
 
+                <!-- Incluye -->
+                <Frame BackgroundColor="#FFCC80" CornerRadius="15" Padding="10" HasShadow="True">
+                    <Label Text="Incluye shot de Bobas"
+                       FontAttributes="Bold"
+                       FontSize="14"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center" />
+                </Frame>
 
-        <Label Text="BEBIDA FRÍA BASE LECHE"
-           TextColor="Black"
-           FontSize="Subtitle"
-           FontAttributes="Bold"
-           HorizontalOptions="Center" />
+                <!-- Tamaño -->
+                <Label Text="Elige el tamaño:"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   TextColor="Black" />
+                <Picker x:Name="pickerSucursal"
+                    Title="Selecciona una opción"
+                        TitleColor="#8B4513"
+                        TextColor="Black"
+                    BackgroundColor="Bisque">
+                    <Picker.Items>
+                        <x:String>Mediano  16oz $95</x:String>
+                        <x:String>Grandote 20oz $99</x:String>
+                    </Picker.Items>
+                </Picker>
 
-        <Grid BackgroundColor="#FFCC80" HeightRequest="80" Padding="10">
-            <Label Text="Elaborado manualmente en shakers&#10;¡Descubre su sabor más intimo en cada sabor!&#10;                     Incluye shot de Bobas"
-               TextColor="Black"
-               FontAttributes="Bold"
-               VerticalOptions="Center"
-               HorizontalOptions="Center" />
-        </Grid>
+                <!-- Crema batida -->
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox x:Name="MostrarPickerCheckBox" Color="Brown" />
+                    <Label Text="Agregar crema batida $7" FontSize="14" VerticalOptions="Center" />
+                </HorizontalStackLayout>
 
-        <Label Text="Elige el tamaño:" FontAttributes="Bold" />
-        <Picker x:Name="pickerSucursal">
-            <Picker.Items>
-                <x:String>Mediano  $95</x:String>
-                <x:String>Grandote $99</x:String>
-            </Picker.Items>
-        </Picker>
-
-        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
-            <CheckBox x:Name="MostrarPickerCheckBox" 
-              Color="Brown" />
-            <Label Text="Agregar crema batida" VerticalOptions="Center" />
-        </HorizontalStackLayout>
-
-        <Button x:Name="BotonDesplegar"
-                    Text="Mostrar Sabores:"
+                <!-- Botón desplegar sabores -->
+                <Button x:Name="BotonDesplegar"
+                    Text="Mostrar Sabores"
                     FontAttributes="Bold"
                     BackgroundColor="Bisque"
                     TextColor="Black"
                     Clicked="BotonDesplegar_Clicked"
                     WidthRequest="330"
-                    HeightRequest="0"
-                    CornerRadius="56" />
+                    CornerRadius="25" />
 
-        <!-- Labels ocultos inicialmente -->
-        <VerticalStackLayout x:Name="DetallesLayout" IsVisible="False" Spacing="0">
-            <Label Text="Seleccione un sabor para su bebida"
-                       TextColor="Black"
+                <!-- Sabores (inicialmente oculto) -->
+                <VerticalStackLayout x:Name="DetallesLayout" IsVisible="False" Spacing="10">
+                    <Label Text="Seleccione un sabor para su bebida"
                        FontSize="14"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Start"
-                       LineHeight="1.5" />
-            <Picker x:Name="Sabores"
+                       TextColor="Black"
+                       HorizontalOptions="Center" />
+
+                    <Picker x:Name="Sabores"
                         Title="Seleccione el sabor"
                         SelectedIndexChanged="OnSabor"
-                        Background="Bisque"
+                        BackgroundColor="Bisque"
                         TitleColor="#8B4513"
-                        TextColor="Black"
-                        Margin="10" />
-        </VerticalStackLayout>
-
-        <Button Text="Comprar"
-            BackgroundColor="#8B4513"
-            TextColor="White"
-            Clicked="OnComprarBebida"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/> 
-        
-    </VerticalStackLayout>
+                        TextColor="Black" />
+                </VerticalStackLayout>
+                        <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                        <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                        <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                <!-- Botón comprar -->
+                <Button Text="Comprar"
+                    BackgroundColor="#8B4513"
+                    TextColor="Bisque"
+                    FontAttributes="Bold"
+                    Clicked="OnComprarBebida"
+                    WidthRequest="300"
+                    HeightRequest="20"
+                    CornerRadius="20"
+                    HorizontalOptions="Center" />
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

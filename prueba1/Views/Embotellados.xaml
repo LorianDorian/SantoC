@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba1.Views.Embotellados"
+             BackgroundColor="{StaticResource PrimaryColor}"
+             Title="">
+
+    <ScrollView>
+        <Grid> 
+        <VerticalStackLayout Padding="10" Spacing="25" HorizontalOptions="Center">
+
+            <Image Source="embotellados.png"
+                   HeightRequest="125"
+                   BackgroundColor="Bisque"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit" />
+
+            <Label Text="Embotellados"
+                   TextColor="Black"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+
+                <VerticalStackLayout Spacing="15" >
+                    <!-- Producto 1 -->
+                    <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True" HorizontalOptions="FillAndExpand">
+                        <VerticalStackLayout>
+                            <Label Text="COCA COLA 500ml $39" HorizontalOptions="Center"
+                               TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
+                                Clicked="OnComprarClicked1" CornerRadius="10"
+                                HorizontalOptions="Center" WidthRequest="120" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Producto 2 -->
+                    <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                        <VerticalStackLayout>
+                            <Label Text="SIDRAL 500ml $39" HorizontalOptions="Center"
+                               TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            
+                            <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
+                                Clicked="OnComprarClicked1" CornerRadius="10"
+                                HorizontalOptions="Center" WidthRequest="120" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Producto 3 -->
+                    <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                        <VerticalStackLayout>
+                            <Label Text="FRESCA 500ml $39" HorizontalOptions="Center"
+                               TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            
+                            <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
+                                Clicked="OnComprarClicked1" CornerRadius="10"
+                                HorizontalOptions="Center" WidthRequest="120" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Producto 4 -->
+                    <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                        <VerticalStackLayout>
+                            <Label Text="AGUA PERRIER 500ml $45" HorizontalOptions="Center"
+                               TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
+                                Clicked="OnComprarClicked1" CornerRadius="10"
+                                HorizontalOptions="Center" WidthRequest="120" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+                    <!-- Producto 5 -->
+                    <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                        <VerticalStackLayout>
+                            <Label Text="AGUA CIEL 500ml $25" HorizontalOptions="Center"
+                               TextColor="Black" FontSize="18" FontAttributes="Bold" />
+                            <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
+                                Clicked="OnComprarClicked1" CornerRadius="10"
+                                HorizontalOptions="Center" WidthRequest="120" />
+                        </VerticalStackLayout>
+                    </Frame>
+
+
+
+                </VerticalStackLayout>
+
+
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

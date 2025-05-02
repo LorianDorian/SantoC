@@ -107,6 +107,9 @@
 	  <MauiXaml Update="Views\Compra.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Embotellados.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Frapes.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

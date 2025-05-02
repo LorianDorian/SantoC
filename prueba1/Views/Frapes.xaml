@@ -18,8 +18,10 @@
                    FontSize="Medium"
                    FontAttributes="Bold"
                    HorizontalOptions="Center" />
-
-            <Label Text="SANTO FRAPPE BASE LECHE"
+                
+                <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="SANTO FRAPPE BASE LECHE"
                    TextColor="Black"
                    FontSize="Subtitle"
                    FontAttributes="Bold"
@@ -67,7 +69,9 @@
                         TextColor="Black"
                         Margin="10" />
             </VerticalStackLayout>
-
+                        <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                        <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                        <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
             <Button Text="Comprar"
                     BackgroundColor="#8B4513"
                     TextColor="White"
@@ -77,8 +81,12 @@
                     WidthRequest="330"
                     HeightRequest="0"
                     CornerRadius="36"/>
+                    </VerticalStackLayout>
+                </Frame>
 
-            <Label Text="SANTO FRAPPE BASE YOGURT"
+                <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="SANTO FRAPPE BASE YOGURT"
                    TextColor="Black"
                    FontSize="Subtitle"
                    FontAttributes="Bold"
@@ -126,7 +134,9 @@
                         TextColor="Black"
                         Margin="10" />
             </VerticalStackLayout>
-
+                        <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
+                        <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                        <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
             <Button Text="Comprar"
                     BackgroundColor="#8B4513"
                     TextColor="White"
@@ -136,7 +146,9 @@
                     WidthRequest="330"
                     HeightRequest="0"
                     CornerRadius="36"/>
-        </VerticalStackLayout>
+                    </VerticalStackLayout>
+                </Frame>
+            </VerticalStackLayout>
         </Grid>
     </ScrollView>
 
