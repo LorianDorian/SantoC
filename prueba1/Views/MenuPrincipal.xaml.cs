@@ -25,6 +25,8 @@ namespace prueba1.Views
         {
             InitializeComponent();
             BindingContext = this;
+            DispararCarruselAutomatico();
+
         }
 
         // Navegación general sin switch, usando reflexión
@@ -67,6 +69,7 @@ namespace prueba1.Views
         private async void OnSucursalesClicked(object sender, EventArgs e) => await NavigateToPage("Sucursales");
         private async void OnMicuentaClicked(object sender, EventArgs e) => await NavigateToPage("Personal");
         private async void OnPromocionesClicked(object sender, EventArgs e) => await NavigateToPage("Promociones");
+        private async void CarritoClicked(object sender, EventArgs e) => await NavigateToPage("Carrito");
 
         // Botones de categorías
         private async void BtnChurros(object sender, EventArgs e) => await NavigateToPage("Churros");
@@ -86,5 +89,20 @@ namespace prueba1.Views
                 await NavigateToPage(item.PaginaDestino);
             }
         }
+        private async void DispararCarruselAutomatico()
+        {
+            while (true)
+            {
+                await Task.Delay(2000); // Espera 3 segundos entre cada imagen
+                if (Imagenes.Count == 0) return;
+
+                MainThread.BeginInvokeOnMainThread(() =>
+                {
+                    // Avanza a la siguiente posición; vuelve al inicio si es necesario
+                    MiCarrusel.Position = (MiCarrusel.Position + 1) % Imagenes.Count;
+                });
+            }
+        }
+
     }
 }

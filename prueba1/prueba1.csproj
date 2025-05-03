@@ -101,6 +101,9 @@
 	  <MauiXaml Update="Views\Cafe.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Carrito.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Churros.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

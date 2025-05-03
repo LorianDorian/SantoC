@@ -33,7 +33,7 @@
                             <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
-                                HorizontalOptions="Center" WidthRequest="120" />
+                                HorizontalOptions="Center" WidthRequest="320" />
                         </VerticalStackLayout>
                     </Frame>
 
@@ -48,7 +48,7 @@
                             
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
-                                HorizontalOptions="Center" WidthRequest="120" />
+                                HorizontalOptions="Center" WidthRequest="320" />
                         </VerticalStackLayout>
                     </Frame>
 
@@ -63,7 +63,7 @@
                             
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
-                                HorizontalOptions="Center" WidthRequest="120" />
+                                HorizontalOptions="Center" WidthRequest="320" />
                         </VerticalStackLayout>
                     </Frame>
 
@@ -77,7 +77,7 @@
                             <Label x:Name="lblCantidadSeleccionada4" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
-                                HorizontalOptions="Center" WidthRequest="120" />
+                                HorizontalOptions="Center" WidthRequest="320" />
                         </VerticalStackLayout>
                     </Frame>
 
@@ -91,7 +91,7 @@
                             <Label x:Name="lblCantidadSeleccionada5" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
-                                HorizontalOptions="Center" WidthRequest="120" />
+                                HorizontalOptions="Center" WidthRequest="320" />
                         </VerticalStackLayout>
                     </Frame>
 

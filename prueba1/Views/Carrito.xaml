@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="prueba1.Views.Carrito"
+             Title=""
+             BackgroundColor="{StaticResource PrimaryColor}">
+    <ScrollView>
+        <Grid> 
+        <VerticalStackLayout Padding="0" Spacing="15" HorizontalOptions="Center">
+            <!-- Imagen del carrito -->
+            <Image Source="carrito.png"
+                   HeightRequest="85"
+                   BackgroundColor="Bisque"
+                   HorizontalOptions="Center"
+                   Aspect="AspectFit" />
+
+            <!-- Título del Carrito -->
+            <Label Text="Carrito"
+                   TextColor="Black"
+                   FontSize="Medium"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+
+                <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="PRODUCTO$"
+            TextColor="Black"
+            FontSize="Subtitle"
+            FontAttributes="Bold"
+            HorizontalOptions="Center" />
+
+                        <Grid BackgroundColor="#FFCC80" HeightRequest="40" Padding="10">
+                            <Label Text="********************Tipo******************"
+                TextColor="Black"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                HorizontalOptions="Center" />
+                        </Grid>
+                        <Label Text="Núero de Pedido: [ID]" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="Descripción del producto : [Las caracteristicas ]" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="Cliente: [Nombre Cliente]" FontAttributes="Bold" TextColor="Black" />
+                        <Label Text="Sucursal: [Nombre Sucursal]" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="Tipo de Pago: [Tipo Pago]" FontAttributes="Bold" TextColor="Black" />
+                        <Label Text="Fecha: [Fecha]" FontAttributes="Bold" TextColor="Black" />
+                        <Label Text="Estado: [Estado]" FontAttributes="Bold" TextColor="Black" />
+                        <Label Text="Cantidad: [Cantidad]" FontAttributes="Bold" TextColor="Black"/>
+                        <Label Text="Total: [Total]" FontAttributes="Bold" TextColor="DarkRed" />
+                    </VerticalStackLayout>
+                </Frame>
+
+
+                <!-- Total -->
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <Label Text="Total:" VerticalOptions="Center" HorizontalOptions="Start" />
+                <Label Text="{Binding Total}" VerticalOptions="Center" HorizontalOptions="End" FontAttributes="Bold" />
+            </StackLayout>
+
+            <!-- Botón de pago -->
+            <Button Text="Realizar Pago"
+                    BackgroundColor="#8B4513"
+                    TextColor="White"
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand"
+                    Command="{Binding RealizarPagoCommand}" />
+        </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

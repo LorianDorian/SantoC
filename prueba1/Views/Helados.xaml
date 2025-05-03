@@ -80,8 +80,36 @@
                         <x:String>Vaso Mediano $39</x:String>
                     </Picker.Items>
                 </Picker>
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="MostrarPickerCheckBox3" 
+                CheckedChanged="OnCheckBoxChanged3" 
+                Color="Brown" />
+                            <Label Text="Agregar Toppings $9" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
 
-            </StackLayout>
+                        <!-- El Picker estará oculto al inicio -->
+                        <Picker x:Name="SaboresPicker3" 
+                Title="Seleccione Toppings" 
+                Background="Bisque"
+                TitleColor="#8B4513"
+                TextColor="Black"
+                Margin="20"
+                IsVisible="False">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Chocoretas</x:String>
+                                    <x:String>Galletas Oreo</x:String>
+                                    <x:String>MyM's</x:String>
+                                    <x:String>Mazapán</x:String>
+                                    <x:String>Kranky</x:String>
+                                    <x:String>Chispas de Colores</x:String>
+                                    <x:String>Turín Chocolate Oscuro</x:String>
+                                    <x:String>Turín Chocolate Blanco</x:String>
+                                    <x:String>Nuez</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+                    </StackLayout>
 
             <StackLayout x:Name="ConoFields" IsVisible="False">
                 <Label Text="Elige el tamaño del cono:" FontAttributes="Bold" />
@@ -92,7 +120,38 @@
                     </Picker.Items>
                 </Picker>
 
-            </StackLayout>
+
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                                            <CheckBox x:Name="MostrarPickerCheckBox4" 
+                        CheckedChanged="OnCheckBoxChanged4" 
+                        Color="Brown" />
+                                            <Label Text="Agregar Toppings $9" VerticalOptions="Center" />
+                                        </HorizontalStackLayout>
+
+                                        <!-- El Picker estará oculto al inicio -->
+                                        <Picker x:Name="SaboresPicker4" 
+                        Title="Seleccione Toppings" 
+                        Background="Bisque"
+                        TitleColor="#8B4513"
+                        TextColor="Black"
+                        Margin="20"
+                        IsVisible="False">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Chocoretas</x:String>
+                                    <x:String>Galletas Oreo</x:String>
+                                    <x:String>MyM's</x:String>
+                                    <x:String>Mazapán</x:String>
+                                    <x:String>Kranky</x:String>
+                                    <x:String>Chispas de Colores</x:String>
+                                    <x:String>Turín Chocolate Oscuro</x:String>
+                                    <x:String>Turín Chocolate Blanco</x:String>
+                                    <x:String>Nuez</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+                    </StackLayout>
                     <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
                     <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
                     <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>

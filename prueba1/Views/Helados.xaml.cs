@@ -60,5 +60,9 @@ namespace prueba1.Views
                 }
             }
         }
+        private void OnCheckBoxChanged3(object sender, CheckedChangedEventArgs e)
+        { SaboresPicker3.IsVisible = e.Value; }
+        private void OnCheckBoxChanged4(object sender, CheckedChangedEventArgs e)
+        { SaboresPicker4.IsVisible = e.Value; }
     }
 }

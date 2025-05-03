@@ -8,7 +8,7 @@
         <VerticalStackLayout Padding="17" Spacing="5">
 
         <Image       Source="sucursal1.png"
-             HeightRequest="75"
+             HeightRequest="95"
              BackgroundColor="Bisque"
              HorizontalOptions="Center"
              Aspect="AspectFit" />
@@ -17,9 +17,11 @@
        TextColor="Black"
        FontSize="Medium"
        FontAttributes="Bold"
-       HorizontalOptions="Center" /> 
-        
-        <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
+       HorizontalOptions="Center" />
+
+            <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
             <Label Text="El Santo Churro - Pie de la Cuesta"
                TextColor="Black"
                FontAttributes="Bold"
@@ -83,8 +85,12 @@
         LineHeight="1.5" />     
         </VerticalStackLayout>
 
+        </VerticalStackLayout>
+        </Frame>
 
-            <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
+        <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+            <VerticalStackLayout Spacing="10">
+                <Grid BackgroundColor="#FFCC80" HeightRequest="50" Padding="10">
             <Label Text="El Santo Churro - Costera"
                TextColor="Black"
                FontAttributes="Bold"
@@ -148,8 +154,9 @@
                                 VerticalOptions="Start"
         LineHeight="1.5" />
         </VerticalStackLayout>
+        </VerticalStackLayout>
+        </Frame>
 
-        
-    </VerticalStackLayout>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

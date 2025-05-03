@@ -146,7 +146,7 @@
 
             <!-- Labels ocultos inicialmente -->
             <VerticalStackLayout x:Name="DetallesLayout" IsVisible="False" Spacing="0">
-                <Label Text="Seleccione un sabor de Churro"
+                <Label Text="Seleccione un sabor de Frapee"
                        TextColor="Black"
                        FontSize="14"
                        HorizontalOptions="Center"

@@ -5,7 +5,7 @@
              BackgroundColor="{StaticResource PrimaryColor}"
              Title="">
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="5">
+        <VerticalStackLayout Padding="20" Spacing="15">
 
             <!-- Parte superior: Logo + Bienvenida -->
             <Grid ColumnDefinitions="Auto,*" Padding="0" VerticalOptions="Start">
@@ -24,8 +24,9 @@
                        HorizontalOptions="Start"
                         Grid.Column="1"/>
             </Grid>
-
-            <!-- Botones -->
+            <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="10">
+                    <!-- Botones -->
             <Button Text="Nombre      >>" Clicked="EditarNombre" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,5,20,0"/>
             <Button Text="Correo      >>" Clicked="EditarCorreo" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
             <Button Text="Teléfono      >>" Clicked="EditarTelefono" BackgroundColor="#8B4513" TextColor="White" HorizontalOptions="Fill" Margin="20,25,20,0"/>
@@ -34,8 +35,11 @@
 
             <!-- Fecha de actividad -->
             <Label Text="Activo desde: (fecha)" BackgroundColor="Transparent" TextColor="Black" HorizontalOptions="Start" Margin="20,25,20,0"/>
-
-            <!-- Título de pedidos anteriores -->
+        </VerticalStackLayout>
+        </Frame>
+        <Frame BackgroundColor="#FFF3E0" CornerRadius="20" Padding="15" HasShadow="True">
+                <VerticalStackLayout Spacing="16">
+                    <!-- Título de pedidos anteriores -->
             <Grid BackgroundColor="#8B4513" HeightRequest="40" Padding="10" RowSpacing="8">
                 <Label Text="Pedidos anteriores"
                        TextColor="White"
@@ -62,7 +66,8 @@
                 <Label Text="Estado: [Estado]" FontAttributes="Bold" TextColor="Black" Grid.Row="5"/>
                 <Label Text="Total: [Total]" FontAttributes="Bold" TextColor="DarkRed" Grid.Row="6"/>
             </Grid>
-
+                </VerticalStackLayout>
+            </Frame>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

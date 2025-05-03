@@ -25,6 +25,7 @@
                 <Button Text="Pedidos" Clicked="OnMicuentaClicked" BackgroundColor="Transparent" TextColor="Black" />
                 <Button Text="Sucursales" Clicked="OnSucursalesClicked" BackgroundColor="Transparent" TextColor="Black" />
                 <Button Text="Acerca de" Clicked="OnAcercaDeClicked" BackgroundColor="Transparent" TextColor="Black" />
+                <Button Text="Carrito" Clicked="CarritoClicked" BackgroundColor="Transparent" TextColor="Black" />
             </StackLayout>
 
             <!-- Capa semitransparente -->
@@ -72,22 +73,24 @@
                         Grid.Column="2"/>
                 </Grid>
 
-                <!-- Carrusel de imágenes -->
                 <CarouselView 
-                    ItemsSource="{Binding Imagenes}" 
-                    HeightRequest="350"
-                    WidthRequest="350"
-                    Loop="True"
-                    HorizontalOptions="Center">
+    x:Name="MiCarrusel"
+    ItemsSource="{Binding Imagenes}" 
+    HeightRequest="350"
+    WidthRequest="350"
+    Loop="True"
+    HorizontalOptions="Center">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <ImageButton 
-                                Source="{Binding Imagen}" 
-                                Aspect="AspectFill"
-                                Clicked="OnImagenClicked"/>
+                Source="{Binding Imagen}" 
+                Aspect="AspectFill"
+                Clicked="OnImagenClicked"/>
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
+
+
 
                 <!-- Sección de categorías -->
                 <Grid ColumnDefinitions="*,*" Padding="25">
