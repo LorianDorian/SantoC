@@ -53,4 +53,8 @@ public partial class Smoothie : ContentPage
             }
         }
     }
+    private void OnCheckBoxChanged3(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker3.IsVisible = e.Value; }
+    private void OnCheckBoxChanged2(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker2.IsVisible = e.Value; }
 }

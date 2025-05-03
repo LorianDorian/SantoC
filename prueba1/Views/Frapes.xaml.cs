@@ -1,4 +1,3 @@
-
 namespace prueba1.Views;
 
 public partial class Frapes : ContentPage
@@ -8,8 +7,8 @@ public partial class Frapes : ContentPage
     public List<string> SaboresYogurt { get; set; }
 
     public Frapes()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         SaboresLeche = new List<string>
         { "Cajeta Coronado","Lechera","Chocolate Hersheys","Queso Crema","Nutella","Chocolate Blanco",
         "Piña Colada","Fresa","Zarzamora","Caramelo","Maple","Mango"};
@@ -85,4 +84,16 @@ public partial class Frapes : ContentPage
             }
         }
     }
+    private void OnCheckBoxChanged(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker.IsVisible = e.Value;}
+    private void OnCheckBoxChanged1(object sender, CheckedChangedEventArgs e)
+    {SaboresPicker1.IsVisible = e.Value;}
+    private void OnCheckBoxChanged2(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker2.IsVisible = e.Value; }
+    private void OnCheckBoxChanged3(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker3.IsVisible = e.Value; }
+    private void OnCheckBoxChanged4(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker4.IsVisible = e.Value; }
+    private void OnCheckBoxChanged5(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker5.IsVisible = e.Value; }
 }

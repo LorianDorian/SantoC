@@ -69,7 +69,67 @@
                     <Label Text="Agregar crema batida $7" FontSize="14" VerticalOptions="Center" />
                 </HorizontalStackLayout>
 
-                <!-- Botón desplegar sabores -->
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="MostrarPickerCheckBox1" 
+                      CheckedChanged="OnCheckBoxChanged1" 
+                        Color="Brown" />
+                            <Label Text="Agregar Jelly $14" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <!-- El Picker estará oculto al inicio -->
+                        <Picker x:Name="SaboresPicker1" 
+                         Title="Seleccione Jelly" 
+                             Background="Bisque"
+                             TitleColor="#8B4513"
+                             TextColor="Black"
+                             Margin="20"
+                         IsVisible="False">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Café</x:String>
+                                    <x:String>Mango</x:String>
+                                    <x:String>Fresa</x:String>
+                                    <x:String>Lychee</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+
+
+                        <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                            <CheckBox x:Name="MostrarPickerCheckBox3" 
+ CheckedChanged="OnCheckBoxChanged3" 
+ Color="Brown" />
+                            <Label Text="Agregar Toppings $9" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <!-- El Picker estará oculto al inicio -->
+                        <Picker x:Name="SaboresPicker3" 
+ Title="Seleccione Toppings" 
+     Background="Bisque"
+     TitleColor="#8B4513"
+     TextColor="Black"
+     Margin="20"
+ IsVisible="False">
+                            <Picker.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>Chocoretas</x:String>
+                                    <x:String>Galletas Oreo</x:String>
+                                    <x:String>MyM's</x:String>
+                                    <x:String>Mazapán</x:String>
+                                    <x:String>Kranky</x:String>
+                                    <x:String>Chispas de Colores</x:String>
+                                    <x:String>Turín Chocolate Oscuro</x:String>
+                                    <x:String>Turín Chocolate Blanco</x:String>
+                                    <x:String>Nuez</x:String>
+                                </x:Array>
+                            </Picker.ItemsSource>
+                        </Picker>
+
+
+
+
+                        <!-- Botón desplegar sabores -->
                 <Button x:Name="BotonDesplegar"
                     Text="Mostrar Sabores"
                     FontAttributes="Bold"

@@ -43,8 +43,8 @@
                             <Label Text="SIDRAL 500ml $39" HorizontalOptions="Center"
                                TextColor="Black" FontSize="18" FontAttributes="Bold" />
                             <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
-                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper2" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada2" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
@@ -58,8 +58,8 @@
                             <Label Text="FRESCA 500ml $39" HorizontalOptions="Center"
                                TextColor="Black" FontSize="18" FontAttributes="Bold" />
                             <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
-                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper3" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada3" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
@@ -73,8 +73,8 @@
                             <Label Text="AGUA PERRIER 500ml $45" HorizontalOptions="Center"
                                TextColor="Black" FontSize="18" FontAttributes="Bold" />
                             <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
-                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper4" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada4" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
                                 HorizontalOptions="Center" WidthRequest="120" />
@@ -87,8 +87,8 @@
                             <Label Text="AGUA CIEL 500ml $25" HorizontalOptions="Center"
                                TextColor="Black" FontSize="18" FontAttributes="Bold" />
                             <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                            <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
-                            <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                            <Stepper x:Name="cantidadStepper5" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                            <Label x:Name="lblCantidadSeleccionada5" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                             <Button Text="Comprar" BackgroundColor="#8B4513" TextColor="White"
                                 Clicked="OnComprarClicked1" CornerRadius="10"
                                 HorizontalOptions="Center" WidthRequest="120" />

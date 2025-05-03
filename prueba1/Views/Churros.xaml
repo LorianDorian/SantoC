@@ -36,8 +36,8 @@
               HorizontalOptions="Center" />
                     </Grid>
                     <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                    <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
-                    <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                    <Stepper x:Name="cantidadStepper" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                    <Label x:Name="lblCantidadSeleccionada" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
                     <Button Text="Comprar"
                 BackgroundColor="#8B4513"
                 TextColor="White"
@@ -100,7 +100,7 @@
 
         </VerticalStackLayout>
 
-        <VerticalStackLayout Padding="20" Spacing="20">
+        <VerticalStackLayout Padding="20" Spacing="10">
             <Label 
         Text="Relevo $7" 
                TextColor="Black"
@@ -213,8 +213,8 @@
                 </Picker.ItemsSource>
             </Picker>
                         <Label Text="Cantidad:" FontAttributes="Bold"  HorizontalOptions="Center"/>
-                        <Stepper x:Name="cantidadStepper1" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
-                        <Label x:Name="lblCantidadSeleccionada1" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
+                        <Stepper x:Name="cantidadStepper3" Minimum="1" Maximum="10" ValueChanged="OnCantidadChanged" HorizontalOptions="Center" BackgroundColor="Transparent"/>
+                        <Label x:Name="lblCantidadSeleccionada3" Text="Cantidad seleccionada: 1"  HorizontalOptions="Center"/>
             <Button Text="Comprar"
             BackgroundColor="#8B4513"
             TextColor="White"

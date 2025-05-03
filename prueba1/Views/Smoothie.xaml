@@ -4,7 +4,9 @@
              x:Class="prueba1.Views.Smoothie"
               BackgroundColor="{StaticResource PrimaryColor}"
              Title="">
-    <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
+    <ScrollView>
+        <Grid>
+            <VerticalStackLayout Padding="20" Spacing="10" HorizontalOptions="Center">
 
         <Image       Source="smothie.png"
                      HeightRequest="75"
@@ -26,7 +28,7 @@
            FontAttributes="Bold"
            HorizontalOptions="Center" />
 
-        <Grid BackgroundColor="#FFCC80" HeightRequest="80" Padding="10">
+        <Grid BackgroundColor="#FFCC80" HeightRequest="60" Padding="10">
             <Label Text="Esta bebida puede incluir Chamoy y Miguelito"
                TextColor="Black"
                FontAttributes="Bold"
@@ -55,9 +57,64 @@
             <Label Text="Incluye Miguelito" VerticalOptions="Center" />
         </HorizontalStackLayout>
 
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox x:Name="MostrarPickerCheckBox2" 
+ CheckedChanged="OnCheckBoxChanged2" 
+ Color="Brown" />
+                    <Label Text="Agregar Jelly $14" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <!-- El Picker estará oculto al inicio -->
+                <Picker x:Name="SaboresPicker2" 
+ Title="Seleccione Jelly" 
+     Background="Bisque"
+     TitleColor="#8B4513"
+     TextColor="Black"
+     Margin="20"
+ IsVisible="False">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Café</x:String>
+                            <x:String>Mango</x:String>
+                            <x:String>Fresa</x:String>
+                            <x:String>Lychee</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
 
 
-        <Button x:Name="BotonDesplegar"
+
+                <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                    <CheckBox x:Name="MostrarPickerCheckBox3" 
+ CheckedChanged="OnCheckBoxChanged3" 
+ Color="Brown" />
+                    <Label Text="Agregar Toppings $9" VerticalOptions="Center" />
+                </HorizontalStackLayout>
+
+                <!-- El Picker estará oculto al inicio -->
+                <Picker x:Name="SaboresPicker3" 
+ Title="Seleccione Toppings" 
+     Background="Bisque"
+     TitleColor="#8B4513"
+     TextColor="Black"
+     Margin="20"
+ IsVisible="False">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Chocoretas</x:String>
+                            <x:String>Galletas Oreo</x:String>
+                            <x:String>MyM's</x:String>
+                            <x:String>Mazapán</x:String>
+                            <x:String>Kranky</x:String>
+                            <x:String>Chispas de Colores</x:String>
+                            <x:String>Turín Chocolate Oscuro</x:String>
+                            <x:String>Turín Chocolate Blanco</x:String>
+                            <x:String>Nuez</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Button x:Name="BotonDesplegar"
                   Text="Mostrar Sabores:"
                   FontAttributes="Bold"
                   BackgroundColor="Bisque"
@@ -96,4 +153,6 @@
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
 </ContentPage>

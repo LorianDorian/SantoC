@@ -52,4 +52,8 @@ public partial class Bebidas : ContentPage
             }
         }
     }
+    private void OnCheckBoxChanged1(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker1.IsVisible = e.Value; }
+    private void OnCheckBoxChanged3(object sender, CheckedChangedEventArgs e)
+    { SaboresPicker3.IsVisible = e.Value; }
 }
